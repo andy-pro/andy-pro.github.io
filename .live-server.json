@@ -1,0 +1,6 @@
+{
+  "port": 3000,
+  "open": false,
+  "ignorePattern": "frontend\\.*|bower_component\\.*",
+  "wait": 200
+}

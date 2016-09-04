@@ -1,0 +1,26 @@
+{
+  "name": "js_apps",
+  "authors": [
+    "andy-pro <andy.pro.1972@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "jquery-color": "^2.1.2",
+    "pure": "^0.6.0",
+    "bootstrap": "^3.3.7",
+    "jcarousel": "^0.3.4",
+    "normalize-css": "^4.2.0",
+    "chosen": "^1.6.2"
+  }
+}
