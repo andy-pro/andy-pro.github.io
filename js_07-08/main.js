@@ -46,24 +46,24 @@ $(function() {
 
   var $tabs = $('.tabs');
 
-  var tabs1 = new Tabs($($tabs[0]), tabs_data_1);
-  tabs1.onClick = function(e) {
-    console.log('tabs1 clicked: ', this, e);
-  }
-  tabs1.onScroll = function(e) {
-    console.log('content1 scrolled: ', this, e);
-  }
+  new Tabs($($tabs[0]), tabs_data_1)
+    .on('click', function(e) {
+      console.log('tabs1 header clicked: ', this, e);
+    })
+    .on('scroll', function(e) {
+      console.log('tabs1 content scrolled: ', this, e);
+    });
 
-  var tabs2 = new Tabs($($tabs[1]), tabs_data_2);
-  tabs2.onClick = function(e) {
-    console.log('tabs2 clicked: ', this, e);
-  }
+  new Tabs($($tabs[1]), tabs_data_2)
+    .on('click', function(e) {
+      console.log('tabs2 header clicked: ', this, e);
+    });
 
   $('[data-toggle=tooltip]').each(function() {
-    var tt = new Tooltip($(this));
+    new Tooltip($(this))
     // add events, if necessary
-    tt.onShow = function(e) {console.log(this, e);}
-    tt.onHide = function(e) {console.log(this, e);}
+    .on('show', function(e) {console.log(this, e);})
+    .on('hide', function(e) {console.log(this, e);});
   });
 
 });
@@ -71,20 +71,30 @@ $(function() {
 /* === Tabs component === */
 function Tabs($root, data) {
 
-  var self = this;
-
   // add some events to our component
-  this.onClick = dummy;
-  this.onScroll = dummy;
+  var onClick, onScroll;
+  onClick = onScroll = function() {};
 
   $root.find('.tabs__header').text(data.title);
 
   var content = $root.find('.tabs__content').scroll(function(event) {
-    self.onScroll.call(this, event);
+    onScroll.call(this, event);
   });
 
   var headers = addTabHeaders(data.items);
   headers[0].trigger('click');
+
+  this.on = function(event, cb) {
+    switch (event) {
+      case 'click':
+        onClick = cb;
+        break;
+      case 'scroll':
+        onScroll = cb;
+        break;
+    }
+    return this;
+  };
 
   function addTabHeaders(items) {
     var $nav = $root.find('.tabs__nav'),
@@ -99,85 +109,73 @@ function Tabs($root, data) {
   }
 
   function clickHandler(event) {
-    var index = $(this).index();
-    $.each(headers, function(_index) {
-      index == _index ? this.addClass('selected') : this.removeClass('selected');
-    });
-    content.fadeOut(150, function() {
-      content.text(data.items[index].text).fadeIn(150);
-    })
-    self.onClick.call(this, event);
+    var $el = $(this);
+    if (!$el.hasClass('selected')) {
+      var index = $el.index();
+      $.each(headers, function(_index) {
+        index == _index ? this.addClass('selected') : this.removeClass('selected');
+      });
+      content.fadeOut(150, function() {
+        content.text(data.items[index].text).fadeIn(150);
+      });
+      onClick.call(this, event);
+    }
     return false;
   }
-
-  function dummy() {}
 
 }
 
 /* === Tooltip component === */
 function Tooltip($el) {
 
-  var self = this;
-
   // add some events to our component
-  this.onShow = dummy;
-  this.onHide = dummy;
+  var onShow, onHide;
+  onShow = onHide = function() {};
 
   var offset = $el.offset();
   offset.left += $el.width() + 12;
 
-  this.div = $('<div/>', {
+  var div = $('<div/>', {
     'class': 'tooltip',
     text: $el.attr('title'),
     css: offset
   }).appendTo('body');
 
-  var anm_show,
-      anm_hide,
-      anm_speed;
-  switch ($el.attr('data-animation')) {
-    case 'show':
-      anm_show = 'show';
-      anm_hide = 'hide';
-      anm_speed = 'fast';
-      break;
-    case 'fadeIn':
-      anm_show = 'fadeIn';
-      anm_hide = 'fadeOut';
-      anm_speed = 'fast';
-      break;
-    default:
-      anm_show = 'show';
-      anm_hide = 'hide';
-      anm_speed = 0;
-  }
-
-  // short but tangled
-  // var anm_show = $el.attr('data-animation');
-  // var anm_speed = anm_show ? 'fast' : 0;
-  // var anm_hide = anm_show == 'fadeIn' ? 'fadeOut' : 'hide';
-  // anm_show = anm_show == 'show' | anm_show == 'fadeIn' ? anm_show : 'show';
+  var anm_show = $el.attr('data-animation');
+  var anm_speed = anm_show ? 'fast' : 0;
+  var anm_hide = anm_show == 'fadeIn' ? 'fadeOut' : 'hide';
+  anm_show = anm_show == 'show' | anm_show == 'fadeIn' ? anm_show : 'show';
 
   var timerId;
   var showed;
 
   $el.removeAttr('title')
-    .mouseover(function(event) {
+    .on('mouseover focusin', function(event) {
       timerId = setTimeout(function() {
-        self.onShow.call(self.div, 'show');
-        self.div[anm_show](anm_speed);
+        onShow.call(div, 'show');
+        div[anm_show](anm_speed);
         showed = true;
       }, 300);
     })
-    .mouseout(function() {
+    .on('mouseout focusout', function() {
       clearTimeout(timerId);
       if (showed) {
         showed = false;
-        self.onHide.call(self.div, 'hide');
-        self.div[anm_hide](anm_speed);
+        onHide.call(div, 'hide');
+        div[anm_hide](anm_speed);
       }
     });
 
-  function dummy() {}
+  this.on = function(event, cb) {
+    switch (event) {
+      case 'show':
+        onShow = cb;
+        break;
+      case 'hide':
+        onHide = cb;
+        break;
+    }
+    return this;
+  };
 
 }
