@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css" media="screen">
+    <script src="../public/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <title>Tabs &amp; Tooltips</title>
+  </head>
+  <body>
+
+    <div class="container">
+
+      <header>
+        <h1>Tabs &amp; Tooltips</h1>
+      </header>
+
+      <section class="tabs">
+        <h2  class="tabs__header"></h2>
+        <nav class="tabs__nav"></nav>
+        <div class="tabs__content-container">
+          <div class="tabs__content"></div>
+        </div>
+      </section>
+
+      <section class="tooltips-demo">
+        <h2>Form with tooltips example 1</h2>
+        <form>
+          <fieldset>
+            <label>
+              <span>Firstname</span>
+              <input data-toggle="tooltip" data-animation="fadeIn" name="firstname" title="Please provide your firstname.">
+            </label>
+            <label>
+              <span>Lastname</span>
+              <input data-toggle="tooltip" data-animation="show" name="lastname" title="Please provide also your lastname.">
+            </label>
+            <label>
+              <span>Address</span>
+              <input data-toggle="tooltip" name="address" title="Your home or work address.">
+            </label>
+          </fieldset>
+        </form>
+      </section>
+
+      <section class="tabs">
+        <h2  class="tabs__header"></h2>
+        <nav class="tabs__nav"></nav>
+        <div class="tabs__content-container">
+          <div class="tabs__content"></div>
+        </div>
+      </section>
+
+    </div>
+
+  </body>
+</html>

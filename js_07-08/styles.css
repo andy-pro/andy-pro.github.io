@@ -1,0 +1,92 @@
+/* === common === */
+body {
+  background-color: #311;
+  color: #eee;
+  font-family: Arial,sans-serif;
+  font-size: 16px;
+  margin: 0 30px 30px;
+}
+.container {
+  width: 600px;
+  margin: 0 auto;
+}
+header {
+  padding: 10px 10px 0;
+  text-align: center;
+}
+h1, h2 {
+  text-shadow: 2px 2px 4px black;
+}
+a {
+  color: #ccc;
+}
+a:hover {
+  color: white;
+}
+
+/* === forms === */
+form {
+  box-shadow: 0 0 40px 5px black;
+  border: 1px solid #555;
+  border-radius: 10px;
+  background-color: #333;
+  padding: 12px;
+}
+form label {
+  display: block;
+  margin: 1.6em;
+}
+form span {
+  display: inline-block;
+  width: 5em;
+}
+fieldset {
+  border: none;
+}
+
+/* === tabs === */
+/* tabs colors */
+.tabs__nav a, .tabs__content-container {
+  border-color: #555;
+}
+.tabs__nav a.selected, .tabs__content-container {
+  background-color: #333;
+}
+/* tabs layout */
+.tabs__nav a {
+  display: inline-block;
+  padding: 12px;
+  text-decoration: none;
+  border-bottom-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px 5px 0 0;
+  margin-bottom: -1px;
+}
+.tabs__content-container {
+  border-radius: 0 10px 10px 10px;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: 0 0 40px 5px black;
+  padding: 1.5em;
+}
+.tabs__content {
+  height: 14.4em;
+  line-height: 1.2em;
+  overflow: auto;
+}
+
+/* === tooltips === */
+.tooltip {
+  display: none;
+  padding: 4px;
+  position: absolute;
+  z-index: 9999;
+  width: 15em;
+  box-shadow: 0 0 5px #fff;
+  background: #ffa;
+  color: #333;
+  font-size: 0.8em;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+}
