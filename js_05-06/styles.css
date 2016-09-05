@@ -1,0 +1,76 @@
+body {
+  font-size: 2.5vw;
+}
+.pure-g {
+  padding: 1.5em 0;
+}
+.pure-u-1-3 {
+  width: 33.2%;
+}
+.inline-wrapper {
+  display: inline-block;
+}
+.rounded {
+  border: 0.45em solid black;
+  border-radius: 2em;
+  text-align: center;
+  overflow: hidden;
+}
+
+.header {
+  background-color: #039;
+  text-align: center;
+  padding: 0.3em;
+}
+.header__title {
+  font-family: cursive;
+  font-weight: bold;
+  text-shadow: 0 3px 3px black;
+  color: white;
+}
+
+.stopwatch {
+  color: black;
+  font-weight: bold;
+}
+.stopwatch__display {
+  background-color: #eef;
+  font-family: Tahoma;
+  padding: 0.5em;
+}
+.stopwatch__units {
+  font-size: 550%;
+  line-height: 0.8em;
+}
+#msecDisplay {
+  font-size: 120%;
+  line-height: 1em;
+  text-align: right;
+}
+
+.stopwatch__start, .stopwatch__clear {
+  font-size: 230%;
+  font-family: sans-serif;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.stopwatch__start {
+  background-image: linear-gradient(150deg, #1a1 49%, #181 51%, #1a1 75%);
+}
+.stopwatch__start:hover {
+  background-image: linear-gradient(150deg, #2d2 49%, #2b2 51%, #2d2 75%);
+}
+.stopwatch__clear {
+  background-image: linear-gradient(150deg, #a11 49%, #811 51%, #a11 75%);
+}
+.stopwatch__clear:hover {
+  background-image: linear-gradient(150deg, #d22 49%, #b22 51%, #d22 75%);
+}
+.stopwatch__pause {
+  background-image: linear-gradient(150deg, #17b 49%, #2ad 51%, #16b 75%);
+}
+.stopwatch__pause:hover {
+  background-image: linear-gradient(150deg, #3af 49%, #39d 51%, #39d 75%);
+}

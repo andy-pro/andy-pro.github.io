@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Users database</title>
+  </head>
+  <body>
+  <script>
+
+    var users = new Array(5);
+    fillUserArray(users);
+    var name = prompt('Введите имя пользователя:');
+    alert(name + checkUser(users, name));
+
+    function fillUserArray(users) {
+      for (var i = 0; i < users.length; i++) {
+        var msg = 'Заполняем массив пользователей:\nПользователь № ' + (1 + i);
+        do {
+          users[i] = prompt(msg);
+        } while (!users[i]);
+      }
+    }
+
+    function checkUser(users, name) {
+      for (var i = 0; i < users.length; i++) {
+        if (users[i] == name) {
+          return ', вы успешно вошли!';
+        }
+      }
+      return ' - нет такого пользователя!';
+    }
+
+  </script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/main.css" media="screen">
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+      <nav>
+        <ul class="menu">
+          <li>
+            <a class="prime-menu" href="#">
+              Ola!
+              <span class="ul-decor">Entrar</span>
+              ou
+              <span class="ul-decor">Cadastre-se</span>
+            </a>
+          </li>
+          <li>
+            <a class="prime-menu" href="#">
+              <i class="icon icon-flag"></i>
+              Minhas Ofertas
+            </a>
+          </li>
+          <li class="divider"></li>
+          <li><a class="extra-menu" href="#">Ajuda</a></li>
+          <li><a class="extra-menu" href="#">Contato</a></li>
+          <li><a class="extra-menu" href="#">Forum</a></li>
+          <li><a class="extra-menu" href="#">Vender</a></li>
+          <li><a class="extra-menu" href="/">Meu YouBike</a></li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <main class="center-block">
+
+      <div class="panel-title center">Cadastre-se</div>
+      <form class="login" action="index.html" method="POST">
+        <a href="https://www.facebook.com/login">
+          <img src="img/facebook.png" alt="">
+        </a>
+        <div class="dl-decor center">OU</div>
+        <input class="form-control" type="text" name="first_name" placeholder="First Name" required>
+        <input class="form-control" type="text" name="last_name" placeholder="Last Name" required>
+        <input class="form-control" type="email" name="email" placeholder="Email Address" required>
+        <input class="form-control" type="password" name="password" placeholder="Choose Password" required>
+        <input class="form-control" type="password" name="psw_confirm" placeholder="Password Confirm" required>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"> Send me Youbike updates and tips
+          </label>
+        </div>
+        <div class="center">
+          <button type="submit">Create my Account</button>
+        </div>
+      </form>
+      <div class="notice center">
+        By clicking the button above, you agree to the Terms of Service<br>
+        View our Privacy Policy.
+      </div>
+
+    </main>
+
+  </div>
+
+</body>
+</html>

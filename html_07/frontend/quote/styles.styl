@@ -1,0 +1,38 @@
+.quote
+  position relative
+  background white
+  padding 27px 34px
+  margin 20px 25px
+  border 2px solid white
+  border-radius 5px
+  box-shadow 0 1px 3px 0 rgba(0, 0, 0, 0.2)
+  &:after
+    content ''
+    position absolute
+    right 28px
+    bottom -36px
+    border 18px solid white
+    border-color transparent transparent transparent white
+    transform-origin 0 0
+    transform rotate(-45deg)
+    box-shadow -4px 0 3px -3px rgba(0, 0, 0, 0.2)
+
+.quote__img
+  position absolute
+  top 16px
+  left -25px
+
+.quote__title
+  font-size 30px
+  white-space nowrap
+  width 0
+
+.quote__link
+  color #edbfff
+  white-space nowrap
+
+.quote__text
+  overflow-y hidden
+  height 180px
+  padding-top 7px
+  letter-spacing -0.4px

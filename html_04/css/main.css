@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ol, ul {
+  list-style: none;
+}
+body {
+  font-family: "Tahoma", sans-serif;
+  font-size: 14px;
+  background: #0c739f url(../img/background.png) repeat-x;
+  color: #424c43;
+}
+h1 {
+  font-size: 18px;
+  text-align: center;
+}
+
+#wrapper {
+  background: white;
+  box-shadow: 0 0 10px #333;
+  margin: 0 auto;
+  width: 1000px;
+}
+
+/* Header */
+#up_block {
+  height: 175px;
+  position: relative;
+  color: #128aa7;
+  font-size: 12px;
+}
+#logo img {
+  position: absolute;
+  top: 12px;
+  left: 28px;
+}
+#logo span {
+  position: absolute;
+  top: 113px;
+  left: 100px;
+}
+#contacts {
+  position: absolute;
+  line-height: 1.55;
+  top: 7px;
+  right: 30px;
+  color: #5fa5bb;
+}
+#countries {
+  position: absolute;
+  bottom: 10px;
+  right: 28px;
+}
+#countries li {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  margin: 0 5px;
+}
+#countries li span {
+  display: block;
+  font-size: 10px;
+}
+#countries a {
+  text-decoration: underline;
+}
+/* end of Header */
+
+/* Dropdown menu */
+.menu {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  border-bottom: 1px solid black;
+  position: relative;
+  margin-top: -2px;
+}
+.menu, .dropdown-menu {
+  background: #303030;
+  box-shadow: 0 6px 10px -4px #333;
+}
+.menu > li {
+  position: relative;
+}
+.menu a {
+  display: block;
+  height: 28px;
+  padding: 5px 10px;
+  color: #dedede;
+}
+.menu a:hover {
+  color: white;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 120px;
+  border-top: 1px solid black;
+}
+.menu li:hover > .dropdown-menu {
+  display: block;
+}
+.caret {
+	width: 0;
+	height: 0;
+  display: inline-block;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 8px solid white;
+}
+/* end of Dropdown menu */
+
+/* Main content */
+.container {
+  /*font-size: 0;*/
+  display: flex;
+  /* flex-flow shorthands the flex-direction and flex-wrap */
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.sidebar {
+  background-color: #edeef0;
+  width: 210px;
+  border: 1px solid #cacaca;
+}
+.content {
+  width: 580px;
+}
+section {
+  padding: 2px 12px;
+  line-height: 1.7;
+}
+/* end of Main content */
+
+footer {
+  color: white;
+  text-align: center;
+  padding: 8px;
+  font-size: 12px;
+}

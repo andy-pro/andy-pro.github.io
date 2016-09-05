@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+li {
+  list-style: none;
+}
+.menu li {
+  float: left;
+}
+
+html, body, .container, footer {
+  height: 100%;
+}
+body {
+  font-family: sans-serif;
+  background-color: #f9f9f9;
+  color: #2c2c2c;
+  font-size: 14px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1060px;
+  /*height: 100%;*/
+  /*height: 100vh;*/
+  box-sizing: border-box;
+  background-color: white;
+  box-shadow: -5px 0 5px -5px #333, 5px 0 5px -5px #333;
+  padding: 30px 50px;
+  display: table;
+}
+.container > * {
+  display: table-row;
+}
+
+.logo {
+  font-size: 50px;
+  padding-bottom: 20px;
+}
+
+nav {
+  background: linear-gradient(to bottom, #5e5e5e, #434343);
+  color: #ebebeb;
+  min-height: 30px;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+nav a:hover {
+  /*box-sizing: border-box;*/
+  border-left-color: #999;
+  border-right-color: #999;
+  background: linear-gradient(to top, #2e2e2e, #4a4a4a);
+}
+nav a:active {
+  border-left: 1px solid #999;
+  border-right: 1px solid #999;
+  background: linear-gradient(to top, #1e1e1e, #3a3a3a);
+}
+nav a, .footer a {
+  /*box-sizing: border-box;*/
+  color: inherit;
+  padding: 12px 40px;
+  border: 1px solid transparent;
+  /*padding: 12px 0px;*/
+  text-align: center;
+}
+
+.sidebar {
+  float: left;
+  width: 240px;
+}
+
+.product-view {
+  float: right;
+  width: 680px;
+}
+
+.product-menu {
+  border: 1px solid #c8c8c8;
+}
+.product-menu li {
+  border-bottom: 1px solid #c8c8c8;
+}
+.product-menu li:last-child {
+  border: none;
+}
+.product-menu a {
+  color: #656363;
+  padding: 12px 20px;
+}
+.product-menu a:hover {
+  background-color: #f9f9f9;
+  padding-left: 35px;
+}
+.product-border {
+  border: 1px solid #c8c8c8;
+}
+.product-img {
+  margin: 30px 90px;
+}
+.product-info {
+  margin: 25px;
+}
+
+footer > div {
+  padding: 12px;
+  margin-bottom: 30px;
+  background-color: #e1e1e1;
+  color: #2c2c2c;
+}
+footer a {
+  display: inline-block;
+  padding: 0 30px;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+.clearfix:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+.right {
+  float: right;
+}

@@ -1,0 +1,75 @@
+﻿* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background: #282828;
+  color: #e6e6e6;
+  font-size: 11px;
+  font-family: "Tahoma", sans-serif;
+}
+
+.container {
+  background: black url("../img/background.png") no-repeat;
+  margin: 0 auto;
+  padding: 55px 0 0 70px;
+  position: relative;
+  width: 960px;
+  height: 880px;
+}
+
+header {
+  position: relative;
+  height: 150px;
+}
+
+.logo {
+  background: url(../img/palm_tree.png) no-repeat bottom right;
+  display: block;
+  width: 265px;
+  height: inherit;
+  padding-top: 80px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.contacts {
+  position: absolute;
+  right: 75px;
+  bottom: 18px;
+}
+
+.contacts-info {
+  margin-top: 5px;
+  font-size: 8px;
+}
+
+figure {
+  float: left;
+  padding-right: 12px;
+  padding-bottom: 50px;
+  font-size: 15px;
+  text-align: center;
+}
+
+figure a:hover img {
+  box-shadow: 0 0 5px 2px rgba(150, 150, 150, 1);
+}
+
+.photo {
+  padding: 2px;
+  border: 2px solid #bfbfbf;
+}
+
+footer {
+  position: relative;
+  margin-top: -30px;
+  text-align: center;
+}

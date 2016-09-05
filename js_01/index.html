@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My Power</title>
+  </head>
+  <body>
+  <script>
+
+    function pow(x, n) {
+      var result = 1;
+      var nm = Math.abs(n);
+      while (nm) {
+        result *= x;
+        nm--;
+      }
+      return n < 0 ? 1/result : result;
+    }
+
+    var number = parseInt( prompt("Введите число:") );
+    var power = parseInt( prompt("Введите степень:") );
+    console.log( pow(number, power) );
+
+  </script>
+  </body>
+</html>

@@ -15,23 +15,36 @@
         min-height: 100%;
       }
       body {
-        margin: 0 0 100px;
+        margin: 0 0 90px;
         background: #eee url('public/img/bg.png');
-        font-family: serif;
       }
       main {
         background: #ccd url('public/img/back.gif') no-repeat top right;
         min-height: 500px;
-        width: 640px;
+        width: 680px;
         margin: 30px auto;
-        padding: 10px;
         box-shadow: 5px 5px 10px gray;
+        font-size: 0;
+      }
+      main > div {
+        display: inline-block;
+        width: 50%;
+        font-size: 16px;
+        font-weight: bold;
+        vertical-align: top;
+      }
+      main h3 {
+        color: #077;
+        font-size: 1.5em;
+        text-align: center;
+        font-family: cursive;
       }
       ul{
         list-style:  none;
         font-size: 1.2em;
-        font-weight: bold;
-        color: #555;
+        color: #677;
+        font-family: sans-serif;
+        line-height: 1.5em;
       }
       a {
         text-decoration: none;
@@ -46,21 +59,40 @@
         color: #ccc;
         position: absolute;
         width: 100%;
-        height: 40px;
-        padding-top: 15px;
         text-align: right;
       }
       footer a {
         margin-right: 10px;
+        line-height: 60px;
       }
     </style>
   </head>
 
   <body>
     <main>
-      <ul>
-        <li><a href="js_07-08">Tabs &amp; Tooltips</a></li>
-      </ul>
+      <div>
+        <h3>HTML</h3>
+        <ul>
+          <li><a href="html_03">03 - Fitness</a></li>
+          <li><a href="html_03-bonus">03-bonus - Asia Holidays</a></li>
+          <li><a href="html_04">04 - Travel Asia</a></li>
+          <li><a href="html_05">05 - YouBike</a></li>
+          <li><a href="html_05-table">05 - Piet-Mondriaan</a></li>
+          <li><a href="html_06">06 - Zazor.com.ua</a></li>
+          <li><a href="html_07">07-09 - PINGBULLER</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>JavaScript</h3>
+        <ul>
+          <li><a href="js_01">01 - Math.pow</a></li>
+          <li><a href="js_02">02 - Users database</a></li>
+          <li><a href="js_03-04">03-04 - Test - Create elements</a></li>
+          <li><a href="js_05-06">05-06 - Stop Watch Timer</a></li>
+          <li><a href="js_05-06-bonus">05-06-bonus - Stop &amp; Split</a></li>
+          <li><a href="js_07-08">07-08 - Tabs &amp; Tooltips</a></li>
+        </ul>
+      </div>
     </main>
   </body>
   <footer>
