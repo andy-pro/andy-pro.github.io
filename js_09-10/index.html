@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../public/bower_components/normalize-css/normalize.css" media="screen">
+    <link rel="stylesheet" href="../public/bower_components/chosen/chosen.css" media="screen">
+    <link rel="stylesheet" href="styles.css" media="screen">
+    <script src="../public/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../public/bower_components/chosen/chosen.jquery.js"></script>
+    <script src="../public/bower_components/jcarousel/dist/jquery.jcarousel.min.js"></script>
+    <script src="../public/bower_components/jquery-color/dist/jquery.color.plus-names.min.js"></script>
+    <script src="main.js"></script>
+    <title>jCarousel</title>
+  </head>
+  <body>
+
+    <header>
+
+      <nav class="main-menu"></nav>
+
+      <div class="container">
+
+        <div class="logo">
+          <a href="http://sorgalla.com/jcarousel">jCarousel</a>
+          <div>Riding carousels with jQuery</div>
+        </div>
+
+        <div class="carousel-options">
+          <label for="slider_color">Slider color&nbsp;</label>
+          <select id="slider_color" class="chosen-select" data-placeholder="Choose a Color...">
+            <option value=""></option>
+          </select>
+        </div>
+
+      </div>
+
+    </header>
+
+    <div id="slider">
+      <div class="container">
+        <div class="jcarousel-wrapper">
+          <div class="jcarousel">
+            <ul>
+              <li><img width="748" height="420" alt="" src="img/img1.jpg"></li>
+              <li><img width="748" height="420" alt="" src="img/img2.jpg"></li>
+              <li><img width="748" height="420" alt="" src="img/img3.jpg"></li>
+              <li><img width="748" height="420" alt="" src="img/img4.jpg"></li>
+              <li><img width="748" height="420" alt="" src="img/img5.jpg"></li>
+              <li><img width="748" height="420" alt="" src="img/img6.jpg"></li>
+            </ul>
+          </div>
+          <p class="photo-credits">Photos by Andy Pro</p>
+          <a class="jcarousel-control-prev" href="#">‹</a>
+          <a class="jcarousel-control-next" href="#">›</a>
+          <p class="jcarousel-pagination">
+            <a href="#1">1</a>
+            <a href="#2">2</a>
+            <a href="#3">3</a>
+            <a href="#4">4</a>
+            <a href="#5">5</a>
+            <a href="#6">6</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
