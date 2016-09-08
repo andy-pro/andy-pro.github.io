@@ -38,13 +38,16 @@
     // classList >= ie10
     // hello billy, father-fucking iexplore.exe
     // var menuElement = document.getElementsByClassName('menu--header')[0];
-    var menuElement = document.querySelectorAll('.menu--header')[0];
-    var classList = menuElement.classList;
+    var menuElement = document.querySelector('.menu--header');
+    console.log(menuElement);
+    // var classList = menuElement.classList;
+    var _class = menuElement.className;
     var ruler = document.getElementById("media-width-detection-element");
     menuElement.onclick = function () {
       if (ruler.offsetWidth < 768) {
-        classList.toggle('menu--v');
-        classList.toggle('menu--h');
+        // classList.toggle('menu--v');
+        // classList.toggle('menu--h');
+        console.log(_class);
       }
     }
   </script>

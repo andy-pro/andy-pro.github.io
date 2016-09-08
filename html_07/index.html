@@ -21,9 +21,12 @@
         .slider {
           -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#40000000, endColorstr=#40000000)";
         }
+        .quote:after {
+          -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865483, M12=0.7071067811865467, M21=-0.7071067811865467, M22=0.7071067811865483, SizingMethod='auto expand')";        }
       </style>
     <![endif]-->
     <!--[if lt IE 10]>
+      <script src="../public/bower_components/ie-classlist/classList.min.js"></script>
       <style media="screen">
         .about-section {
           -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#745083, endColorstr=#322539)";
@@ -197,20 +200,14 @@
     </footer>
     <div id="media-width-detection-element"></div>
     <script type="text/javascript">
-        // getElementsByClassName >= ie9
-        // classList >= ie10
-        // hello billy, father-fucking iexplore.exe
-        // var menuElement = document.getElementsByClassName('menu--header')[0];
-        var menuElement = document.querySelectorAll('.menu--header')[0];
-        var classList = menuElement.classList;
-        var ruler = document.getElementById("media-width-detection-element");
-        menuElement.onclick = function() {
-            if (ruler.offsetWidth < 768) {
-                classList.toggle('menu--v');
-                classList.toggle('menu--h');
-            }
+      document.querySelector('.menu--header').onclick = function() {
+        if (document.getElementById("media-width-detection-element").offsetWidth < 768) {
+          this.classList.toggle('menu--v');
+          this.classList.toggle('menu--h');
         }
+      }
     </script>
+
 </body>
 
 </html>

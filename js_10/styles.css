@@ -1,0 +1,97 @@
+/* === common === */
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+li {
+  margin: 10px 0;
+}
+ul li {
+  overflow: hidden;
+}
+.container {
+  margin: 0 auto;
+  width: 500px;
+  position: relative;
+}
+.center {
+  text-align: center;
+}
+.well {
+  background-color: moccasin;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 2px 2px 3px lightgray;
+  margin: 20px;
+  padding: 0 8px 20px;
+}
+.close {
+  font-size: 22px;
+  color: gray;
+  float: right;
+  font-weight: bold;
+}
+.btn-default {
+  background-color: #eee;
+  border: 1px solid #aaa;
+  color: #555;
+  box-shadow: 0 3px 5px lightgray inset, 2px 2px 3px lightgray;
+  border-radius: 6px;
+  font-size: 18px;
+  padding: 14px;
+  cursor: pointer;
+}
+
+/* === checkboxes === */
+.jq-checkbox, .css-checkbox {
+  cursor: pointer;
+}
+
+/* === jquery checkbox === */
+.jq-checkbox {
+  margin-left: -22px;
+}
+.jq-checkbox span{
+	width: 17px;
+	height: 17px;
+	display: inline-block;
+	background: url(img/checkbox.png);
+  position: relative;
+  top: 3px;
+  margin-right: 4px;
+}
+.jq-checkbox input {
+	/*display: none;*/
+  /*position: relative;*/
+  /*left: 22px;*/
+}
+
+/* === css checkbox === */
+.css-checkbox {
+  margin-left: 2px;
+}
+.css-checkbox input {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+.css-checkbox span:before {
+  content: " ";
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  background: url(img/checkbox.png);
+  position: relative;
+  top: 3px;
+  margin-right: 8px;
+}
+.css-checkbox input:checked + span:before {
+  background-position: 0 -17px;
+}
+.css-checkbox span:hover:before {
+	background-position: 0 -34px;
+}
+.css-checkbox input:checked + span:hover:before {
+	background-position: 0 -51px;
+}

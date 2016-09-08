@@ -21,6 +21,7 @@
     "bootstrap": "^3.3.7",
     "jcarousel": "^0.3.4",
     "normalize-css": "^4.2.0",
-    "chosen": "^1.6.2"
+    "chosen": "^1.6.2",
+    "ie-classlist": "^1.1.20150312"
   }
 }

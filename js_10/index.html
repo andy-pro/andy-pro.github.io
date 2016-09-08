@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css" media="screen">
+    <!--[if gte IE 9]><!-->
+      <script src="../public/bower_components/jquery/dist/jquery.min.js"></script>
+    <!--<![endif]-->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script   src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <![endif]-->
+    <script src="main.js"></script>
+    <title>Test</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="well">
+        <a class="close" href="/" title="Back to home">&times;</a>
+        <div class="center"><br>
+          <strong>Нестандартные чекбоксы:</strong><br>
+          Вопрос №1,2 - с помощью <em>jquery</em><br>
+          Вопрос №3 - с помощью <em>css</em>
+        </div>
+      </div>
+      <form class="test" action="index.html" method="post">
+        <ol>
+          <li>Вопрос №1
+            <ul>
+              <li>
+                <label class="jq-checkbox">
+                  <input type="checkbox" name="q1_answ1">
+                  <span></span>
+                  Вариант ответа №1
+                </label>
+              </li>
+              <li>
+                <label class="jq-checkbox">
+                  <input type="checkbox" name="q1_answ2" checked="checked">
+                  <span></span>
+                  Вариант ответа №2
+                </label>
+              </li>
+              <li>
+                <label class="jq-checkbox">
+                  <input type="checkbox" name="q1_answ3">
+                  <span></span>
+                  Вариант ответа №3
+                </label>
+              </li>
+
+            </ul>
+          </li>
+          <li>Вопрос №2
+            <ul>
+              <li>
+                <label class="jq-checkbox">
+                  <input type="checkbox" name="q2_answ1" checked="checked">
+                  <span></span>
+                  Вариант ответа №1
+                </label>
+              </li>
+              <li>
+                <label class="jq-checkbox">
+                  <input type="checkbox" name="q2_answ2" disabled="disabled">
+                  <span></span>
+                  Вариант ответа №2
+                </label>
+              </li>
+              <li>
+                <label class="jq-checkbox">
+                  <input type="checkbox" name="q2_answ3" checked="checked" disabled="disabled">
+                  <span></span>
+                  Вариант ответа №3
+                </label>
+              </li>
+
+            </ul>
+          </li>
+          <li>Вопрос №3
+            <ul>
+              <li>
+                <label class="css-checkbox">
+                  <input type="checkbox" name="q3_answ1">
+                  <span>Вариант ответа №1</span>
+                </label>
+              </li>
+              <li>
+                <label class="css-checkbox">
+                  <input type="checkbox" name="q3_answ2">
+                  <span>Вариант ответа №2</span>
+                </label>
+              </li>
+              <li>
+                <label class="css-checkbox">
+                  <input type="checkbox" name="q3_answ3">
+                  <span>Вариант ответа №3</span>
+                </label>
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <div class="center">
+          <button class="btn-default" type="submit">Проверить мои результаты</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

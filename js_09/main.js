@@ -45,11 +45,11 @@ $(function() {
     })
     .jcarouselPagination();
 
+    var main_menu = new Menu(document.querySelector('.main-menu'), main_menu_data);
+
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-  var main_menu = new Menu(document.querySelector('.main-menu'), main_menu_data);
-});
+// document.addEventListener("DOMContentLoaded", function() {});
 
 function Menu(parent, data, _class) {
   var ul = document.createElement('ul');
@@ -59,41 +59,45 @@ function Menu(parent, data, _class) {
   var drops = ul.querySelectorAll('.menu__dropdown, .menu__dropleft, .menu__dropright');
   for (var i = 0; i < drops.length; i++) {
     (function(li) {
-      var ul = li.children[1],
-          style = ul.style,
-          timerId,
-          state;
-      li.addEventListener('mouseover', listener);
-      li.addEventListener('mouseout', listener);
-      function listener(e) {
-        clearInterval(timerId);
-        var show = e.type === 'mouseover';
-        timerId = setTimeout(function() {
-          if (state != show) {
-            state = show;
-            if (show) {
-              style.opacity = 0;
-              style.display = 'block';
-            }
-            style.overflow = 'hidden';
-            var to = ul.offsetHeight;
-            animate({
-              duration: 300,
-              timing: new Function('x', 'return ' + (show ? '' : '1-') + 'Math.pow(x, 2);'),
-              draw: function(progress) {
-                style.opacity = progress;
-                style.height = to * progress + 'px';
-              },
-              oncomplete: function() {
-                style.overflow = 'visible';
-                style.height = 'auto';
-                if (!show) style.display = 'none';
-              }
-            });
-          }
-        }, show ? 300 : 100);
-      }
+      li._dropChild = {
+        ul: li.children[1],
+        timerId: null,
+        show: false
+      };
+      li.addEventListener('mouseover', eHandler);
+      li.addEventListener('mouseout', eHandler);
     })(drops[i]);
+  }
+
+  function eHandler(e) {
+    var show = e.type === 'mouseover',
+        drop = this._dropChild,
+        style = drop.ul.style;
+    clearInterval(drop.timerId);
+    drop.timerId = setTimeout(function() {
+      if (drop.show != show) {
+        drop.show = show;
+        if (show) {
+          style.opacity = 0;
+          style.display = 'block';
+        }
+        style.overflow = 'hidden';
+        var to = drop.ul.offsetHeight;
+        animate({
+          duration: 300,
+          timing: new Function('x', 'return ' + (show ? '' : '1-') + 'Math.pow(x, 2);'),
+          draw: function(progress) {
+            style.opacity = progress;
+            style.height = to * progress + 'px';
+          },
+          oncomplete: function() {
+            if (!show) style.display = 'none';
+            style.overflow = 'visible';
+            style.height = 'auto';
+          }
+        });
+      }
+    }, show ? 300 : 100);
   }
 
   function parseMenuData(ul, data) {
@@ -132,7 +136,7 @@ function animate(opts) {
 
 var main_menu_data = [
   // https://www.mockaroo.com/
-  {"title": "United States", "link": "#", "sub": null},
+  {"title": "United States", "link": "/", "sub": null},
   {"title": "Bosnia and Herzegovina", "link": "#", "sub": null},
   {"title": "Portugal", "link": "#", "dir": "down", "sub": [
     {"title": "Banquero", "link": "#", "sub": null},
@@ -182,5 +186,6 @@ var main_menu_data = [
       {"title": "65 Gerald Park", "link": "#", "sub": null}
     ]},
     {"title": "Kampungdesa", "link": "#", "sub": null}
-  ]}
+  ]},
+  {"title": "Source code", "link": "https://github.com/andy-pro/andy-pro.github.io/tree/master/js_09-10", "sub": null}
 ];

@@ -18,22 +18,24 @@
         margin: 0 0 90px;
         background: #eee url('public/img/bg.png');
       }
-      main {
+      .main {
         background: #ccd url('public/img/back.gif') no-repeat top right;
         min-height: 500px;
         width: 680px;
         margin: 30px auto;
         box-shadow: 5px 5px 10px gray;
+        -webkit-box-shadow: 5px 5px 10px gray;
+        -moz-box-shadow: 5px 5px 10px gray;
         font-size: 0;
       }
-      main > div {
+      .main > div {
         display: inline-block;
         width: 50%;
         font-size: 16px;
         font-weight: bold;
         vertical-align: top;
       }
-      main h3 {
+      .main h3 {
         color: #077;
         font-size: 1.5em;
         text-align: center;
@@ -53,7 +55,7 @@
       a:hover {
         text-shadow: 1px 1px 3px white;
       }
-      footer {
+      .footer {
         background: #555;
         bottom: 0;
         color: #ccc;
@@ -61,25 +63,35 @@
         width: 100%;
         text-align: right;
       }
-      footer a {
+      .footer a {
         margin-right: 10px;
         line-height: 60px;
       }
     </style>
+    <!--[if lt IE 9]>
+      <style media="screen">
+        .main {
+          zoom: 1;
+          filter: progid:DXImageTransform.Microsoft.Shadow(Color=#888888, Strength=10, Direction=90),
+                  progid:DXImageTransform.Microsoft.Shadow(Color=#888888, Strength=10, Direction=180);
+        }
+      </style>
+    <![endif]-->
   </head>
 
   <body>
-    <main>
+    <div class="main">
       <div>
         <h3>HTML</h3>
         <ul>
           <li><a href="html_03">03 - Fitness</a></li>
           <li><a href="html_03-bonus">03-bonus - Asia Holidays</a></li>
-          <li><a href="html_04">04 - Travel Asia</a></li>
-          <li><a href="html_05">05 - YouBike</a></li>
+          <li><a href="html_04">04 - Asia Holidays Maldives</a></li>
+          <li><a href="html_05">05 - Cadastre</a></li>
           <li><a href="html_05-table">05 - Piet-Mondriaan</a></li>
           <li><a href="html_06">06 - Zazor.com.ua</a></li>
           <li><a href="html_07">07-09 - PINGBULLER</a></li>
+          <li><a href="404.html">404</a></li>
         </ul>
       </div>
       <div>
@@ -91,13 +103,14 @@
           <li><a href="js_05-06">05-06 - Stop Watch Timer</a></li>
           <li><a href="js_05-06-bonus">05-06-bonus - Stop &amp; Split</a></li>
           <li><a href="js_07-08">07-08 - Tabs &amp; Tooltips</a></li>
-          <li><a href="js_09-10">09-10 - jCarousel</a></li>
+          <li><a href="js_09">09 - jCarousel</a></li>
+          <li><a href="js_10">10 - Checkboxes</a></li>
         </ul>
       </div>
-    </main>
+    </div>
   </body>
-  <footer>
+  <div class="footer">
     <a href="https://github.com/andy-pro?tab=repositories">&copy; andy-pro 2016</a>
-  </footer>
+  </div>
 
 </html>

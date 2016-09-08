@@ -10,12 +10,12 @@ a {
 ol, ul {
   list-style: none;
 }
-
+html, body {
+  height: 100%;
+}
 body {
-  font-family: "Arial", sans-serif;
   background-color: #282828;
-  height: 100vh;
-  /*background: url(../img/homework5_table.png) no-repeat center center;*/
+  /*background: url(../img/homework5_table.jpg) no-repeat center center;*/
 }
 
 .Piet-Mondriaan {
@@ -26,24 +26,25 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 503px;
+  width: 500px;
+  height: 540px;
+  margin: -270px 0 0 -250px;
 }
 
-#column1 { width: 55px; }
-#column2 { width: 65px; }
-#column3 { width: 65px; }
-#column4 { width: 140px; }
-#column5 { width: 85px; }
-#column6 { width: 85px; }
+#column1 { width: 11%; }
+#column2 { width: 13%; }
+#column3 { width: 13%; }
+#column4 { width: 29%; }
+#column5 { width: 17%; }
+#column6 { width: 17%; }
 
-#row1 { height: 50px; }
-#row2 { height: 140px; }
-#row3 { height: 140px; }
-#row4 { height: 70px; }
-#row5 { height: 70px; }
-#row6 { height: 35px; }
-#row7 { height: 35px; }
+#row1 { height: 9.7%; }
+#row2 { height: 25.8%; }
+#row3 { height: 25.8%; }
+#row4 { height: 12.9%; }
+#row5 { height: 12.9%; }
+#row6 { height: 6.45%; }
+#row7 { height: 6.45%; }
 
 td {
   border: 8px solid #282828;
