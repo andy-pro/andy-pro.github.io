@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/ico">
+    <link rel="stylesheet" href="../public/bower_components/normalize-css/normalize.css" media="screen">
+    <link rel="stylesheet" href="css/main.css" media="screen">
+    <!--[if gte IE 9]><!-->
+      <script src="../public/bower_components/jquery/dist/jquery.min.js"></script>
+    <!--<![endif]-->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script   src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery.car-ousel.js"></script>
+    <script src="js/main.js"></script>
+    <title>Car-Ousel</title>
+  </head>
+  <body>
+
+    <p class="center">External control</p>
+
+    <div class="settings well m30-center">
+      <a class="close" href="/" title="Back to home">&times;</a>
+      <div id="time-string">--:--:--</div>
+      <label>
+        <span>change the picture every</span>
+        <input type="number" min="1" value="4"> sec.
+      </label>
+      <label>
+        <span>change the direction every</span>
+        <input type="number" min="1" value="16"> sec.
+      </label>
+    </div>
+
+    <div id="carousel1" class="car-ousel m30-center">
+      <div class="car-ousel__loophole">
+        <span class="car-ousel__tape">
+          <img src="img/01.jpg" width="400">
+          <img src="img/02.jpg">
+          <img src="img/03.jpg">
+          <img src="img/04.jpg">
+        </span>
+      </div>
+      <a class="car-ousel__prev" href="#">‹</a>
+      <a class="car-ousel__next" href="#">›</a>
+    </div>
+
+    <hr>
+
+    <p class="center">Use left-right-arrow-keys</p>
+
+    <div id="carousel2" class="car-ousel m30-center">
+      <div class="car-ousel__loophole">
+        <span class="car-ousel__tape">
+          <img src="../js_09/img/img1.jpg" width="748">
+          <img src="../js_09/img/img2.jpg">
+          <img src="../js_09/img/img3.jpg">
+          <img src="../js_09/img/img4.jpg">
+          <img src="../js_09/img/img5.jpg">
+          <img src="../js_09/img/img6.jpg">
+        </span>
+      </div>
+      <a class="car-ousel__prev" href="#">‹</a>
+      <a class="car-ousel__next" href="#">›</a>
+    </div>
+
+    <hr>
+
+    <p class="center">Multiple</p>
+
+    <div id="carousel3" class="car-ousel m30-center">
+      <div class="car-ousel__loophole">
+        <span class="car-ousel__tape">
+          <img src="img/01.jpg" width="400">
+          <img src="img/02.jpg">
+          <img src="img/03.jpg">
+          <img src="img/04.jpg">
+          <img src="img/05.jpg">
+          <img src="img/06.jpg">
+          <img src="img/07.jpg">
+          <img src="img/08.jpg">
+        </span>
+      </div>
+      <a class="car-ousel__prev" href="#">‹</a>
+      <a class="car-ousel__next" href="#">›</a>
+    </div>
+
+  </body>
+</html>
