@@ -1,10 +1,15 @@
 /* === common === */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin: 0 0 90px;
+  background: #eaeaea url('../../public/img/bg.png');
+}
 a {
   text-decoration: none;
   color: inherit;
-}
-body {
-  background: #f1f1f1 url('../../public/img/bg.png');
 }
 .close {
   font: bold 20px sans-serif;
@@ -29,6 +34,18 @@ body {
 .center {
   text-align: center;
 }
+.footer {
+  background: #555;
+  bottom: 0;
+  color: #ccc;
+  position: absolute;
+  width: 100%;
+  text-align: right;
+}
+.footer a {
+  margin-right: 10px;
+  line-height: 60px;
+}
 #time-string {
   font-size: 24px;
   text-align: center;
@@ -50,15 +67,15 @@ body {
 /* === car-ousel custom === */
 #carousel1 {
   width: 400px;
-  height: 310px;
+  /*height: 310px;*/
 }
 #carousel2 {
   width: 748px;
-  height: 420px;
+  /*height: 420px;*/
 }
 #carousel3 {
   width: 800px;
-  height: 310px;
+  /*height: 310px;*/
 }
 .car-ousel {
   border: 10px solid gray;
@@ -78,9 +95,9 @@ body {
 }
 .car-ousel__loophole {
   overflow: hidden;
+  font-size: 0;
 }
 .car-ousel__tape {
-  font-size: 0;
   /*margin-left: -800px;*/
   white-space: nowrap;
 }

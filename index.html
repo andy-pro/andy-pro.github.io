@@ -17,7 +17,7 @@
       }
       body {
         margin: 0 0 90px;
-        background: #eee url('public/img/bg.png');
+        background: #eaeaea url('public/img/bg.png');
       }
       a {
         text-decoration: none;
@@ -83,65 +83,68 @@
   </head>
 
   <body>
+
     <div id="main"></div>
+
+    <div class="footer">
+      <a href="https://github.com/andy-pro?tab=repositories">&copy; andy-pro 2016</a>
+    </div>
+
+    <script type="text/template" id="menuTmpl">
+      <% for (var i = 0; i < volumes.length; i++) {
+        var volume = volumes[i]; %>
+        <div>
+          <h3><%= volume.title %></h3>
+          <ul>
+            <% for (var j = 0; j < volume.lessons.length; j++) {
+              var lesson = volume.lessons[j]; %>
+              <li>
+                <a href="<%= lesson.href %>"><%= lesson.title %></a>
+                <a href="<%= src_prefix %><%= lesson.href %>" class="src-link" target="_blank" title="Source code"></a>
+              </li>
+            <% } %>
+          </ul>
+        </div>
+      <% } %>
+    </script>
+
+    <script type="text/javascript">
+      var data = {
+        src_prefix: 'https://github.com/andy-pro/andy-pro.github.io/tree/master/',
+        volumes: [
+          {
+            title: 'HTML',
+            lessons: [
+              {href: 'html_03', title: '03 - Fitness'},
+              {href: 'html_03-bonus', title: '03 - Asia Holidays'},
+              {href: 'html_04', title: '04 - Asia Holidays Maldives'},
+              {href: 'html_05', title: '05 - Cadastre'},
+              {href: 'html_05-table', title: '05 - Piet-Mondriaan'},
+              {href: 'html_06', title: '06 - Zazor.com.ua'},
+              {href: 'html_07', title: '07 - PINGBULLER'},
+              {href: '404.html', title: '404 (симпатяга из MDN)'}
+            ]
+          }, {
+            title: 'JavaScript',
+            lessons: [
+              {href: 'js_01', title: '01 - Math.pow'},
+              {href: 'js_02', title: '02 - Users database'},
+              {href: 'js_03-04', title: '03 - Test - Create elements'},
+              {href: 'js_05-06', title: '05 - Stop Watch Timer'},
+              {href: 'js_05-06-bonus', title: '06 - Stop &amp; Split'},
+              {href: 'js_07-08', title: '07 - Tabs &amp; Tooltips'},
+              {href: 'js_09', title: '09 - jCarousel'},
+              {href: 'js_10', title: '10 - Checkboxes'},
+              {href: 'js_11', title: '11 - Car-Ousel'},
+              {href: '', title: '12 - Template Resig'},
+              {href: 'js_12-bonus', title: '12 - Template LoDash'}
+            ]
+          }
+        ]
+      };
+      main.innerHTML = tmpl("menuTmpl", data);
+    </script>
+
   </body>
-  <div class="footer">
-    <a href="https://github.com/andy-pro?tab=repositories">&copy; andy-pro 2016</a>
-  </div>
-
-  <script type="text/template" id="menuTmpl">
-    <% for (var i = 0; i < volumes.length; i++) {
-      var volume = volumes[i]; %>
-      <div>
-        <h3><%= volume.title %></h3>
-        <ul>
-          <% for (var j = 0; j < volume.lessons.length; j++) {
-            var lesson = volume.lessons[j]; %>
-            <li>
-              <a href="<%= lesson.href %>"><%= lesson.title %></a>
-              <a href="<%= src_prefix %><%= lesson.href %>" class="src-link" target="_blank" title="Source code"></a>
-            </li>
-          <% } %>
-        </ul>
-      </div>
-    <% } %>
-  </script>
-
-  <script type="text/javascript">
-    var data = {
-      src_prefix: 'https://github.com/andy-pro/andy-pro.github.io/tree/master/',
-      volumes: [
-        {
-          title: 'HTML',
-          lessons: [
-            {href: 'html_03', title: '03 - Fitness'},
-            {href: 'html_03-bonus', title: '03 - Asia Holidays'},
-            {href: 'html_04', title: '04 - Asia Holidays Maldives'},
-            {href: 'html_05', title: '05 - Cadastre'},
-            {href: 'html_05-table', title: '05 - Piet-Mondriaan'},
-            {href: 'html_06', title: '06 - Zazor.com.ua'},
-            {href: 'html_07', title: '07 - PINGBULLER'},
-            {href: '404.html', title: '404 (симпатяга из MDN)'}
-          ]
-        }, {
-          title: 'JavaScript',
-          lessons: [
-            {href: 'js_01', title: '01 - Math.pow'},
-            {href: 'js_02', title: '02 - Users database'},
-            {href: 'js_03-04', title: '03 - Test - Create elements'},
-            {href: 'js_05-06', title: '05 - Stop Watch Timer'},
-            {href: 'js_05-06-bonus', title: '06 - Stop &amp; Split'},
-            {href: 'js_07-08', title: '07 - Tabs &amp; Tooltips'},
-            {href: 'js_09', title: '09 - jCarousel'},
-            {href: 'js_10', title: '10 - Checkboxes'},
-            {href: 'js_11', title: '11 - Car-Ousel'},
-            {href: '', title: '12 - Template Resig'},
-            {href: 'js_12-bonus', title: '12 - Template LoDash'}
-          ]
-        }
-      ]
-    };
-    main.innerHTML = tmpl("menuTmpl", data);
-  </script>
 
 </html>
