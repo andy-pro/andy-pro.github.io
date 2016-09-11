@@ -40,7 +40,7 @@ body {
 }
 .stopwatch__units {
   font-size: 550%;
-  line-height: 0.8em;
+  line-height: 0.9em;
 }
 #msecDisplay {
   font-size: 120%;

@@ -19,26 +19,28 @@
     </div>
 
     <script type="text/template" id="mainTmpl">
-      <h2 class="center"><%= title %></h2>
+      <h2 class="well m30-center center" style="width: 400px;">
+        <a class="close" title="Back to home" href="/">×</a>
+        <%= title %>
+      </h2>
       <% for (var i = 0; i < carousels.length; i++) {
-        var carousel = carousels[i]; %>
-        <h3 class="center">Options: <%= carousel.options %></h3>
-        <div id="<%= carousel.id %>" class="car-ousel m30-center" style="width:<%= carousel.win_width %>px;">
-          <div class="car-ousel__loophole">
+        var carousel = carousels[i],
+            options = JSON.stringify(carousel.options); %>
+        <h3 class="center">Options: <%= options %></h3>
+        <div id="<%= carousel.id %>" class="car-ousel m30-center" style="width:<%= carousel.slot || carousel.width %>px;">
+          <div class="car-ousel__slot">
             <span class="car-ousel__tape">
               <% for (var j = 0; j < carousel.images.length; j++) { %>
-                <img src="<%= carousel.path %><%= carousel.images[j] %>.jpg" width="<%= carousel.img_width %>">
+                <img src="<%= carousel.path %><%= carousel.images[j] %>.jpg" width="<%= carousel.width %>">
               <% } %>
             </span>
           </div>
           <a class="car-ousel__prev" href="#">‹</a>
           <a class="car-ousel__next" href="#">›</a>
         </div>
-        <% var scripttag = "<" + "script" + ">"; %>
-        <% var scriptend = "</" + "script" + ">"; %>
-        <%= scripttag %>
-          $("#<%= carousel.id %>").carOusel({<%= carousel.options %>});
-        <%= scriptend %>
+        <% print("<", "script", ">"); %>
+          $("#<%= carousel.id %>").carOusel(<%= options %>);
+        <% print("</", "script", ">"); %>
         <hr>
       <% } %>
     </script>
@@ -49,25 +51,27 @@
         carousels: [
           {
             id: 'demo1',
-            img_width: 400,
-            win_width: 400,
+            width: 400,
+            slot: 800,
             path: '../js_11/img/',
-            options: 'keycontrol: true',
+            options: {
+              speed: 200,
+              keycontrol: true
+            },
             images: ['01', '02', '03', '04', '05', '06', '07', '08']
           }, {
             id: 'demo2',
-            img_width: 748,
-            win_width: 748,
+            width: 748,
             path: '../js_09/img/',
-            options: 'speed: 800',
-            // options: 'speed: 800, keycontrol: true',
+            options: {
+              speed: 800,
+              keycontrol: true
+            },
             images: ['img1', 'img2', 'img3', 'img4', 'img5', 'img6']
           }, {
             id: 'demo3',
-            img_width: 400,
-            win_width: 800,
+            width: 400,
             path: '../js_11/img/',
-            options: 'speed: 200',
             images: ['01', '02', '03', '04', '05', '06', '07', '08']
           }
         ]

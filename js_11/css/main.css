@@ -93,7 +93,7 @@ a {
   box-sizing: content-box;
   position: relative;
 }
-.car-ousel__loophole {
+.car-ousel__slot {
   overflow: hidden;
   font-size: 0;
 }
