@@ -14,7 +14,7 @@ $(function() {
       // shortcut to <span>
       .data('image', this.children[1])
       .on('change', setCheckboxImage);
-    setCheckboxImage.call($(this.children[0]));
+    setCheckboxImage.call(this.children[0]);
   });
 
   function setCheckboxImage() {

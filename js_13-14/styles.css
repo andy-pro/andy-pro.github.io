@@ -1,0 +1,154 @@
+/* === common === */
+body {
+  font-family: Tahoma, Arial, sans-serif;
+  margin-bottom: 100px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+ol > li {
+  margin-bottom: 20px;
+}
+ul > li {
+  overflow: hidden;
+  padding: 1px 5px;
+  font-size: 12px;
+}
+.container {
+  margin: 0 auto;
+  width: 500px;
+  position: relative;
+}
+.center {
+  text-align: center;
+}
+.well {
+  background-color: moccasin;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px lightgray;
+  margin: 20px;
+  padding: 10px;
+}
+.close {
+  font: bold 20px sans-serif;
+  float: right;
+  margin: -10px -4px 0 0;
+  opacity: 0.2;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.close:after {
+  content: '×';
+}
+.close:hover {
+  opacity: 0.5;
+}
+.btn {
+  border: 1px solid #aaa;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25) inset, 2px 2px 3px lightgray;
+  border-radius: 6px;
+  font-size: 14px;
+  padding: 6px 20px;
+  cursor: pointer;
+}
+.btn-default {
+  color: #555;
+  background-color: #eee;
+}
+.btn-primary {
+  color: white;
+  background-color: #37b;
+}
+
+/* === checkboxes === */
+.jq-checkbox, .css-checkbox {
+  cursor: pointer;
+}
+
+/* === jquery checkbox === */
+.jq-checkbox {
+  margin-left: -22px;
+}
+.jq-checkbox span{
+	width: 17px;
+	height: 17px;
+	display: inline-block;
+	background: url(img/checkbox.png);
+  position: relative;
+  top: 3px;
+  margin-right: 4px;
+}
+.jq-checkbox input {
+	/*display: none;*/
+  /*position: relative;*/
+  /*left: 22px;*/
+}
+
+/* === css checkbox === */
+.css-checkbox {
+  margin-left: 2px;
+}
+.css-checkbox input {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+.css-checkbox span:before {
+  content: " ";
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  background: url(img/checkbox.png);
+  position: relative;
+  top: 3px;
+  margin-right: 8px;
+}
+.css-checkbox input:checked + span:before {
+  background-position: 0 -17px;
+}
+.css-checkbox span:hover:before {
+	background-position: 0 -34px;
+}
+.css-checkbox input:checked + span:hover:before {
+	background-position: 0 -51px;
+}
+
+/* === modal === */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+}
+.modal-dialog {
+  width: 400px;
+  margin: 100px auto;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px #444;
+  background: white;
+  padding: 10px;
+}
+.modal-body {
+  border-color: #ddd;
+  border-style: solid;
+  border-width: 1px 0 1px 0;
+  margin: 10px 0;
+  padding: 30px;
+}
+.modal-footer {
+  text-align: right;
+}
+.modal-open {
+  overflow: hidden;
+  /*padding-right: 16px;*/
+}
