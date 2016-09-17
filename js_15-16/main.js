@@ -4,7 +4,7 @@
 
 $(function() {
 
-  var _first = true,
+  var hint = 'Hint: move mouse over the nickname',
 
       // compile templates
       tmpl = {
@@ -17,19 +17,24 @@ $(function() {
       timerId,
       cache;
 
+  $('#flash').flash(); // flash plugin setup
+
   $('#search-form').submit(function() {
 
     var $form = $(this),
-        q = $form.find('input').val();
+        q = $form.find('input').val(),
+        _t = performance.now();
 
     cache = {}; // clear users cache
 
     $.getJSON('https://api.github.com/search/users?q=' + q, function(data){
-      if (_first) {
+      data.elapsed = ((performance.now() - _t) / 1000).toFixed(2);
+      if (hint) {
         $('header')
           .addClass('content')
           .append($form.detach().removeClass('center-block'));
-        _first = false;
+        $.flash(hint, 10);
+        hint = false;
       }
       $('main')
         .addClass('content')
@@ -96,8 +101,47 @@ $(function() {
     $details.fadeOut();
   }
 
+  // global ajax events
+  $(document)
+    .ajaxError(function(e, x) {
+      var msg = 'Service not available: ' + x.statusText;
+      if (x.responseText) msg += ' (' + x.responseText + ')';
+      $.flash(msg, 10);
+    });
+
 });
 
+
+/* simple flash plugin */
+/** usage example:
+  $('#flash').flash(); // setup
+  $.flash('message', 2); // show message during 2 sec.
+  $.flash('message'); // show message infinitely
+  $.flash(); // close flash
+*/
+(function($) {
+  $.fn.flash = function() {
+    var self = this,
+        timerId,
+        content = this.find('span');
+    this.find('.close').on('click', close);
+    $.flash = function(msg, timeout) {
+      clearTimeout(timerId);
+      if (timeout) timerId = setTimeout(close, timeout * 1000);
+      if (msg) {
+        content.html(msg);
+        self.fadeIn('slow');
+      } else close();
+    }
+    function close() {
+      clearTimeout(timerId);
+      self.fadeOut('slow', function() {
+        content.empty();
+      });
+    }
+  }
+})(jQuery);
+/* end simple flash plugin */
 
 /* class Human */
 function Human(props) {

@@ -25,7 +25,7 @@ a:hover{
 .close {
   font: bold 20px sans-serif;
   float: right;
-  margin: -10px -4px 0 0;
+  margin: -12px -24px 0 0;
   opacity: 0.2;
   background: none;
   border: none;
@@ -64,6 +64,27 @@ footer a {
   padding: 10px 100px;
 }
 
+#flash {
+  background-color: #b98;
+  border: 1px solid #888;
+  padding: 10px 30px;
+  color: white;
+  display: none;
+  min-height: 50px;
+  min-width: 150px;
+  max-width: 200px;
+  position: fixed;
+  right: 30px;
+  top: 30px;
+  word-wrap: break-word;
+  z-index: 10;
+}
+
+#resultStats {
+  font-size: 12px;
+  color: #888;
+}
+
 /* === users list === */
 .user {
   border-bottom: 1px solid #ddd;
@@ -72,13 +93,13 @@ footer a {
 .user > div {
   display: inline-block;
   vertical-align: top;
-  padding: 4px 0 2px;
+  padding: 4px 4px 2px;
 }
 .user__link {
-  color: #1A0DAB;
+  color: #21a;
 }
 .user__score {
-  color: #006621;
+  color: #073;
 }
 
 /* === user details === */
