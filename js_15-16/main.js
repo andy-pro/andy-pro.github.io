@@ -25,6 +25,18 @@ $(function() {
         q = $form.find('input').val(),
         _t = performance.now();
 
+    // custom animated 'required' feature
+    if (!q) {
+      var svg = document.querySelector('.octicon'),
+          counter = 10;
+      clearInterval(timerId);
+      timerId = setInterval(function() {
+        svg.style.fill = (counter-- % 2) ? 'black' : 'red';
+        if (counter <= 0) clearInterval(timerId);
+      }, 100);
+      return false;
+    }
+
     cache = {}; // clear users cache
 
     $.getJSON('https://api.github.com/search/users?q=' + q, function(data){

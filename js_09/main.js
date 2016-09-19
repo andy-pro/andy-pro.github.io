@@ -45,7 +45,7 @@ $(function() {
     })
     .jcarouselPagination();
 
-    var main_menu = new Menu(document.querySelector('.main-menu'), main_menu_data);
+  var main_menu = new Menu(document.querySelector('.main-menu'), main_menu_data);
 
 });
 

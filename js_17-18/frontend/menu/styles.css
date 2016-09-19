@@ -1,0 +1,75 @@
+/*! pure JavaScript
+  dropdown menu */
+
+.menu {
+  background-color: #E4541F;
+  color: #fff;
+  margin: 0;
+  padding: 0 20px;
+}
+.menu ul {
+  display: none;
+  background-color: #B39982;
+  position: absolute;
+  width: 170px;
+  z-index: 10;
+  padding: 0;
+  text-align: center;
+  border-left: 1px solid #976;
+  border-right: 1px solid #976;
+}
+.menu > .menu__dropdown > ul {
+  left: 0;
+  top: 40px;
+}
+.menu .menu__dropleft ul {
+  right: 170px;
+  top: 0;
+}
+.menu .menu__dropright ul {
+  left: 170px;
+  top: 0;
+}
+.menu li {
+  position: relative;
+}
+.menu > li {
+  display: inline-block;
+}
+.menu a {
+  display: block;
+  line-height: 40px;
+  /*margin: 0 10px;*/
+  padding: 0 24px;
+  cursor: pointer;
+}
+.menu a:hover {
+  text-shadow: 1px 1px 2px black;
+}
+.menu ul li {
+  border-bottom: 1px solid #976;
+}
+.menu .menu__dropdown > a:after {
+  content: "";
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 6px solid white;
+  display: inline-block;
+  vertical-align: middle;
+}
+.menu .menu__dropleft > a:after, .menu__dropright > a:after {
+  content: "";
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  position: absolute;
+  top: 16px;
+}
+.menu .menu__dropleft > a:after {
+  border-right: 6px solid white;
+  left: 10px;
+}
+.menu .menu__dropright > a:after {
+  border-left: 6px solid white;
+  right: 10px;
+}
+/* end of menu */

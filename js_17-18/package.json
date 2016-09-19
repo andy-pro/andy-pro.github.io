@@ -1,0 +1,19 @@
+{
+  "name": "js_17-18",
+  "version": "1.0.0",
+  "description": "Домашнее задание:",
+  "main": "main.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-uglify": "^2.0.0",
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "andy-pro <andy.pro.1972@gmail.com> (https://github.com/andy-pro)",
+  "license": "ISC"
+}
