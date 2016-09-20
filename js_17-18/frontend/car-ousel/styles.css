@@ -2,7 +2,7 @@
     jquery plugin */
 
 .car-ousel {
-  border: 10px solid gray;
+  border: 10px solid #aaa;
   border-radius: 5px;
 }
 .car-ousel__prev {

@@ -1,5 +1,3 @@
-/* lesson 17 Grunt */
-
 $(function() {
 
   var clr_select = $('#slider_color'),
@@ -28,6 +26,6 @@ $(function() {
     keycontrol: true
   });
 
-  var main_menu = new Menu(document.querySelector('.main-menu'), main_menu_data);
+  new Menu(document.querySelector('.main-menu'), main_menu_data);
 
 });

@@ -3,18 +3,28 @@ module.exports = function(grunt) {
   var bd = '../public/bower_components/',
       dest = 'dist-grunt/';
 
+  var styles = [
+    bd + 'normalize-css/normalize.css',
+    bd + 'chosen/chosen.css',
+    'frontend/styles.css',
+    'frontend/*/*.css'
+  ];
+
+  var scripts = [
+    bd + 'jquery/dist/jquery-1.12.4.min.js',
+    bd + 'chosen/chosen.jquery.js',
+    bd + 'jquery-color/dist/jquery.color.plus-names.min.js',
+    '../public/js/animate.js',
+    'frontend/*/*.js',
+    'frontend/*.js'
+  ];
+
   grunt.initConfig({
 
     cssmin: {
       styles: {
         files: {
-          [dest + 'main.min.css']: [
-            bd + 'normalize-css/normalize.css',
-            bd + 'chosen/chosen.css',
-            'frontend/styles.css',
-            'frontend/menu/styles.css',
-            'frontend/car-ousel/styles.css'
-          ]
+          [dest + 'main.min.css']: styles
         }
       }
     },
@@ -22,16 +32,7 @@ module.exports = function(grunt) {
     uglify: {
       javascript: {
         files: {
-          [dest + 'main.min.js']: [
-            bd + 'jquery/dist/jquery-1.12.4.min.js',
-            bd + 'chosen/chosen.jquery.js',
-            bd + 'jquery-color/dist/jquery.color.plus-names.min.js',
-            '../public/js/animate.js',
-            'frontend/menu/index.js',
-            'frontend/main_menu_data.js',
-            'frontend/car-ousel/index.js',
-            'frontend/main.js'
-          ]
+          [dest + 'main.min.js']: scripts
         }
       }
     },

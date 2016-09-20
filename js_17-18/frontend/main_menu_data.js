@@ -2,7 +2,7 @@
 
 var main_menu_data = [
   // https://www.mockaroo.com/
-  {"title": "United States", "link": "/", "sub": null},
+  {"title": "Home", "link": "/", "sub": null},
   {"title": "Bosnia and Herzegovina", "link": "#", "sub": null},
   {"title": "Portugal", "link": "#", "dir": "down", "sub": [
     {"title": "Banquero", "link": "#", "sub": null},
@@ -22,9 +22,9 @@ var main_menu_data = [
           {"title": "Carolyn Peters", "link": "#", "sub": null},
           {"title": "Ruby Nelson", "link": "#", "sub": null}
         ]},
-        {"title": "Browsezoom", "link": "#", "sub": null},
+        {"title": "Browsezoom", "link": "#", "sub": null}
       ]},
-      {"title": "685 Anthes Hill", "link": "#", "sub": null},
+      {"title": "685 Anthes Hill", "link": "#", "sub": null}
     ]},
     {"title": "Rancakuya", "link": "#", "sub": null},
     {"title": "Cuauhtemoc", "link": "#", "sub": null}
