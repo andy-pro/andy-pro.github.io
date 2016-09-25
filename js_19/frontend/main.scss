@@ -1,0 +1,113 @@
+@import "../../public/bower_components/normalize-css/normalize.css";
+
+@import "_fonts/index";
+
+/* icons settings */
+[class^="icon-"], [class*=" icon-"] {
+  font-size: 16px;
+}
+[class^="pngicon-"] {
+  background: url('img/icons.png') 0 0 no-repeat;
+  width: 36px;
+  height: 36px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.pngicon-settings {
+  background-position: 0 -42px;
+}
+.pngicon-adjust {
+  background-position: 0 -82px;
+}
+.pngicon-delivery {
+  background-position: 0 -119px;
+}
+
+$background-dark: #2a2d32;
+$background-light: #f7f7f7;
+
+$link-color: #248cec;
+
+h1,h2,h3,h4,h5,h6 {
+  color: #2a2b2e;
+  margin: 0;
+}
+a:hover {
+  color: $link-color;
+}
+
+body {
+  font: normal 13px/1.53 'Ubuntu', sans-serif;
+  color: #8a8a8a;
+  background-color: white;
+}
+ol, ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.container {
+  width: 1160px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+nav {
+  background-color: $background-dark;
+  margin: 40px 0;
+}
+.overall-dark {
+  background-color: $background-dark;
+}
+.overall-light {
+  background-color: $background-light;
+}
+.col-1-2 {
+  width: 50%;
+  float: left;
+}
+.logo {
+  display: inline-block;
+  margin-top: 30px;
+}
+.logo__title {
+  display: inline-block;
+}
+.logo__title h1 {
+  line-height: 1;
+  color: #434343;
+}
+.logo__title h4 {
+  color: #bbb;
+  font-weight: 300;
+  letter-spacing: 1.2px;
+}
+.wrapper {
+  overflow: hidden;
+}
+.close {
+  font: bold 20px sans-serif;
+  float: right;
+  margin: -12px -24px 0 0;
+  opacity: 0.2;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.close:after {
+  content: '×';
+}
+.close:hover {
+  opacity: 0.5;
+}
+
+@import "menu_social/index";
+@import "search_form/index";
+@import "menu_nav/index";
+@import "slider/index";
+@import "brief/index";
+@import "gallery/index";
+@import "preview_post/index";
+@import "accordion/index";
+@import "brands/index";

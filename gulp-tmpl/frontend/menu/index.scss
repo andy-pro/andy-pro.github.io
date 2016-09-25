@@ -1,0 +1,35 @@
+.blue-icon {
+  background-image: url(menu/chat-43.svg);
+}
+.orange-icon {
+  background-image: url(menu/chat-44.svg);
+}
+
+.menu {
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 14px;
+  margin: 20px 20px 50px;
+}
+
+.menu__title {
+  @extend .orange-icon;
+  padding: 6px 30px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.menu__item {
+  padding-left: 40px;
+}
+
+.menu__link {
+  text-decoration: underline;
+  color: white;
+}
+
+.menu__link:hover {
+  text-decoration: none;
+}

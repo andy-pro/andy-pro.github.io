@@ -1,0 +1,10 @@
+mixin Brief(items)
+  ul.brief
+    each item in items
+      li.brief__item
+        .brief__index= item.index
+        .brief__body
+          i(class=item.icon)
+          h3.brief__title= item.title
+          p.brief__text= item.text
+          a.brief__more(href='#') Read More &#8658;

@@ -1,0 +1,6 @@
+mixin menu(title, items)
+  ul.menu(class!=attributes.class)
+    span.menu__title= title
+    each item in items
+      li.menu__item
+        a(href=item.href, class='menu__link')= item.text

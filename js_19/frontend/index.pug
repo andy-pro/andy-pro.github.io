@@ -1,0 +1,51 @@
+extends ./layout
+
+//- mixins
+include ./menu_social/index
+include ./menu_nav/index
+include ./slider/index
+include ./brief/index
+include ./gallery/index
+include ./preview_post/index
+include ./accordion/index
+include ./brands/index
+
+block title
+  title= pageTitle
+
+block content
+  .container
+    header
+      .wrapper
+        a.logo(href='/')
+          span.pngicon-logo
+          span.logo__title
+            h1 Build Home
+            h4 INDUSTRIAL THEME
+        +menuSocial
+      nav.wrapper
+        +menuNav(menu_nav_data)
+        include ./search_form/index
+    +Slider(slider1_data)(id='slider1')
+
+  ='\n'
+
+  main
+    .container
+      +Brief(brief_data)
+    .overall-dark
+      .container
+        h2 Our Services
+        .wrapper
+          +Gallery(gallery_data)
+    .overall-light
+      #news.container
+        .col-1-2
+          h2 Latest News
+          +previewPost(preview_post_data[0])
+          +previewPost(preview_post_data[1])
+        .col-1-2
+          h2 Banners Place
+          +Accordion(accordion1_data)(id='accordion1')
+    .container
+      +Brands(brands_data)

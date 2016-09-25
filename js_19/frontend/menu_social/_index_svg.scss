@@ -1,0 +1,24 @@
+.menu-social {
+  margin-top: 44px;
+  float: right;
+}
+.menu-social__link {
+  margin-left: 15px;
+}
+.menu-social__img {
+  width: 24px;
+  height: 24px;
+}
+.menu-social__img path:first-child {
+  fill: #ccc;
+}
+.menu-social__logo {
+  fill: white;
+}
+.menu-social__link:hover {
+  .menu-social__facebook { fill: #3B5998; }
+  .menu-social__twitter  { fill: #26A6D1; }
+  .menu-social__rss      { fill: #F4B459; }
+  .menu-social__linkedin { fill: #0E76A8; }
+  .menu-social__skype    { fill: #00AFF0; }
+}

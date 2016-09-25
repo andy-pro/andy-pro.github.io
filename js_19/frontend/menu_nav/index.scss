@@ -1,0 +1,20 @@
+.menu-nav {
+  font: 14px/60px 'Ubuntu Condensed', sans-serif;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+.menu-nav__item {
+  padding: 0 40px;
+  display: inline-block;
+  border-right: 1px solid black;
+}
+.menu-nav__item:active {
+  background-color: #248cec;
+}
+.menu-nav__link {
+  color: white;
+}
+.menu-nav__link:hover {
+  color: #f4b60d;
+}

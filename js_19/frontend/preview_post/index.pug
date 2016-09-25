@@ -1,0 +1,12 @@
+mixin previewPost(post)
+  .preview-post
+    .preview-post__img
+      img(src='dist/img/preview_post/'+post.img)
+      div
+        .preview-post__month= post.date.month
+        .preview-post__date= post.date.date
+    .preview_post__text
+      h3
+        a.preview_post__link(href=post.href)= post.title
+      .preview_post__info by #[a(href='#'+post.author)= post.author] Comments (#[a(href='#comments')= post.comments.length])
+      p= post.text

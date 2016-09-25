@@ -1,0 +1,30 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-uglify": "^2.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-concat": "^2.6.0",
+    "gulp-css-url": "0.0.12",
+    "gulp-css-url-adjuster": "^0.2.3",
+    "gulp-cssimport": "^3.1.0",
+    "gulp-data": "^1.2.1",
+    "gulp-file-include": "^0.14.0",
+    "gulp-html-extend": "^1.1.6",
+    "gulp-include": "^2.3.1",
+    "gulp-jade": "^1.1.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-pug": "^3.0.4",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0",
+    "gulp-watch": "^4.3.9",
+    "webpack-stream": "^3.2.0"
+  },
+  "license": "ISC"
+}

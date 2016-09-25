@@ -1,0 +1,30 @@
+.preview-post > div {
+  display: table-cell;
+  vertical-align: top;
+  padding: 16px;
+}
+.preview-post__img {
+  position: relative;
+}
+.preview-post__img > div {
+  position: absolute;
+  top: 26px;
+  left: 0;
+  font-size: 14px;
+}
+.preview-post__month, .preview-post__date {
+  text-align: center;
+  width: 40px;
+  padding: 10px 0;
+}
+.preview-post__month {
+  background-color: #248cec;
+  color: white;
+}
+.preview-post__date {
+  background-color: #f4b60d;
+  color: black;
+}
+.preview_post__info a {
+  color: $link-color;
+}

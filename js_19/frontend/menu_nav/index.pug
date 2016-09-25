@@ -1,0 +1,5 @@
+mixin menuNav(items)
+  ul.menu-nav(class!=attributes.class)
+    each item in items
+      li.menu-nav__item
+        a.menu-nav__link(href=item.href)= item.title

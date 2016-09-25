@@ -1,0 +1,20 @@
+extends ./layout
+
+//- mixin menu
+include ./menu/index
+
+block title
+  title= pageTitle
+
+block content
+
+  include ./header/index
+
+  +menu(menu_title_1, menu_items_1)
+
+  +menu(menu_title_2, menu_items_2)(class='menu--blue')
+  +menu(menu_title_2, menu_items_2)(class='menu--green')
+
+
+block flash
+  include ./flash/index

@@ -1,0 +1,6 @@
+mixin Gallery(items)
+  each item in items
+    figure.gallery
+      a(href='#')
+        img.gallery__img(src='dist/img/gallery/'+item.src)
+        figcaption!= item.title

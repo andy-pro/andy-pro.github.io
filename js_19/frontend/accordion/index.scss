@@ -1,0 +1,25 @@
+.accordion__header {
+  margin-top: 5px;
+  background-color: white;
+}
+.accordion__header > div{
+  border: 1px solid #e8e8e8;
+  line-height: 40px;
+  cursor: pointer;
+}
+.accordion__status {
+  float: left;
+  width: 40px;
+  text-align: center;
+}
+.accordion__title {
+  padding-left: 10px;
+  // margin-left: 40px;
+  overflow: hidden;
+  text-transform: uppercase;
+  color: #2a2d32;
+}
+.accordion__text {
+  font-family: Arial, sans-serif;
+  display: none;
+}

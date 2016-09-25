@@ -1,0 +1,8 @@
+mixin Slider(data)
+  div(id=attributes.id style='width:'+data.width).slider
+    .slider__slot
+      .slider__tape
+        each item in data.items
+          img(src='dist/img/slider/'+item.src width='1160' title=item.title)
+    a.slider__prev(href='#') ‹
+    a.slider__next(href='#') ›

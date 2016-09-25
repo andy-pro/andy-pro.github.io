@@ -1,0 +1,8 @@
+mixin Accordion(items)
+  .accordion(id=attributes.id)
+    each item in items
+      .accordion__header
+        .accordion__status
+          h3 +
+        .accordion__title= item.title
+      p.accordion__text= item.text

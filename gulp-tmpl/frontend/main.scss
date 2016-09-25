@@ -1,0 +1,52 @@
+@import "../../public/bower_components/normalize-css/normalize.css";
+
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+$flash-color: #345;
+$flash-border-color: white;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  background-color: #acb;
+}
+ol, ul {
+  list-style: none;
+}
+
+.close {
+  font: bold 20px sans-serif;
+  float: right;
+  margin: -12px -24px 0 0;
+  opacity: 0.2;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.close:after {
+  content: '×';
+}
+.close:hover {
+  opacity: 0.5;
+}
+
+@import "menu/index";
+@import "flash/index";
+
+.menu--blue {
+  .menu__title {
+    @extend .blue-icon
+  }
+  .menu__link {
+    color: #0e69b2;
+  }
+}
+
+.menu--green {
+  .menu__title {
+    @extend .blue-icon
+  }
+  .menu__link {
+    color: #2a1;
+  }
+}

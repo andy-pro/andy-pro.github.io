@@ -1,0 +1,28 @@
+.search-form {
+  border: 1px solid #111;
+  background-color: #333;
+  display: inline-block;
+  margin: 10px;
+  float: right;
+}
+.search-form__input {
+  border: none;
+  outline: none;
+  margin: 9px;
+  vertical-align: top;
+  width: 200px;
+  background-color: transparent;
+  color: #aaa;
+}
+.search-form__btn {
+  background-color: transparent;
+  color: #777;
+  border: 0;
+  font-size: 0;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+.search-form__btn:hover {
+  color: #aaa;
+}

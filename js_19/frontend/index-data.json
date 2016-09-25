@@ -1,0 +1,76 @@
+{
+
+  "pageTitle": "Build Home",
+
+  "menu_nav_data": [
+    {"href": "/", "title": "HOME"},
+    {"href": "#features", "title": "FEATURES"},
+    {"href": "#services", "title": "SERVICES"},
+    {"href": "#news", "title": "NEWS"},
+    {"href": "#shop", "title": "SHOP"}
+  ],
+
+  "slider1_data": {
+    "width": "1160px",
+    "items": [
+      {"src": "01.jpg", "title": "Build Your Business"},
+      {"src": "02.jpg", "title": "Build Your Department"},
+      {"src": "03.jpg", "title": "Build Your Workshop"},
+      {"src": "04.jpg", "title": "Build Your Transporter"},
+      {"src": "05.jpg", "title": "Build Your Collider"},
+      {"src": "06.jpg", "title": "Build Your Manufactory"},
+      {"src": "07.jpg", "title": "Build Your Robot"},
+      {"src": "08.jpg", "title": "I'll be back"}
+    ]
+  },
+
+  "brief_data": [
+    {"index": "01", "icon": "pngicon-settings", "title": "Power Inside", "text": "Cum sociis natoque penatibus et magnis dis parturient montesmus. Pro vel nibh et elit mollis commodo et nec augueique"},
+    {"index": "02", "icon": "pngicon-adjust",   "title": "New Technologies", "text": "Cum sociis natoque penatibus et magnis dis parturient montesmus. Pro vel nibh et elit mollis commodo et nec augueique"},
+    {"index": "03", "icon": "pngicon-delivery", "title": "Fast Support", "text": "Cum sociis natoque penatibus et magnis dis parturient montesmus. Pro vel nibh et elit mollis commodo et nec augueique"}
+  ],
+
+  "gallery_data": [
+    {"src": "01.jpg", "title": "Schedule Services"},
+    {"src": "02.jpg", "title": "Preventive Maintence"},
+    {"src": "03.jpg", "title": "Tire &amp; Wheel Services"},
+    {"src": "04.jpg", "title": "Repair Services"}
+  ],
+
+  "preview_post_data": [
+    {
+      "href": "#advanced",
+      "img": "design-engineer.jpg",
+      "title": "Advanced Machinery Helps Improve Quality",
+      "author": "cmsmasters",
+      "date": {"month": "Jan", "date": "23"},
+      "text": "Cum sociis natoque penatibus et magnis dis parturient ontesmus. Pro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur samomo enim ipsam voluptatem.",
+      "comments": ["","","","","",""]
+    }, {
+      "href": "#powerful",
+      "img": "electrical-engineer.jpg",
+      "title": "Powerful Techniques for Advanced Service",
+      "author": "cmsmasters",
+      "date": {"month": "Jan", "date": "21"},
+      "text": "Cum sociis natoque penatibus et magnis dis parturient ontesmus. Pro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur samomo enim ipsam voluptatem.",
+      "comments": ["","",""]
+    }
+  ],
+
+  "accordion1_data": [
+    {"title": "Accordion Panel 1", "text": "Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur momo. Cum sociis natoque penatibus et magnis dis parturient ontesmus. Nemo enim ipsam voluptatem quia ptas sit aspernatur samomoPro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur samomo enim ipsam voluptatem."},
+    {"title": "Accordion Panel 2", "text": "Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur momo. Cum sociis natoque penatibus et magnis dis parturient ontesmus. Nemo enim ipsam voluptatem quia ptas sit aspernatur samomoPro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur samomo enim ipsam voluptatem."},
+    {"title": "Accordion Panel 3", "text": "Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur momo. Cum sociis natoque penatibus et magnis dis parturient ontesmus. Nemo enim ipsam voluptatem quia ptas sit aspernatur samomoPro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur samomo enim ipsam voluptatem."},
+    {"title": "Accordion Panel 4", "text": "Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur momo. Cum sociis natoque penatibus et magnis dis parturient ontesmus. Nemo enim ipsam voluptatem quia ptas sit aspernatur samomoPro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur samomo enim ipsam voluptatem."}
+  ],
+
+  "brands_data": [
+    {"href": "//rbp.com", "pos": 0},
+    {"href": "//motometal.com", "pos": 136},
+    {"href": "//crave.com", "pos": 300},
+    {"href": "//atx.com", "pos": 465},
+    {"href": "//cruiser.com", "pos": 608},
+    {"href": "//gear.com", "pos": 754}
+  ]
+
+}

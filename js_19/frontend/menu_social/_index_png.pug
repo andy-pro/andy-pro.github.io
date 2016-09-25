@@ -1,0 +1,18 @@
+mixin menuSocial
+  -
+    var items = [
+      {href: '//facebook.com', out: 4, over: 119},
+      {href: '//twitter.com', out: 25, over: 140},
+      {href: '//rss.com', out: 48, over: 163},
+      {href: '//linkedin.com', out: 71, over: 187},
+      {href: '//skype.com', out: 95, over: 211}
+    ]
+
+  .menu-social
+    each item, index in items
+      a.menu-social__link(
+        href=item.href
+        style=`background-position: 0 -${item.out}px`
+        onmouseover=`this.style.backgroundPosition="0 -${item.over}px"`
+        onmouseout=`this.style.backgroundPosition="0 -${item.out}px"`
+      )

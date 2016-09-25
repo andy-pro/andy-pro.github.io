@@ -1,0 +1,4 @@
+mixin Brands(items)
+  .brands
+    each item in items
+      a.brands__link(href=item.href style=`background-position: -${item.pos}px 0`)
