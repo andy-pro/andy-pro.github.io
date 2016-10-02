@@ -1,0 +1,70 @@
+.matrix-shower {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: transparent;
+  animation-name: matrix-appear;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+@keyframes matrix-appear {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.matrix-shower__row {
+  // display: table-row;
+}
+.matrix-shower__cell {
+  display: inline-block;
+  width: 10%;
+  height: 118px;
+  box-sizing: border-box;
+  margin-bottom: -1px;
+  border-color: rgba(255,255,255,0.2);
+  border-style: solid;
+  border-width: 0 1px 0 0;
+  background-color: rgba(0,0,0,0.4);
+  &:first-child {
+    width: 40%;
+  }
+}
+.matrix-shower__hr {
+  height: 1px;
+  background: linear-gradient(to right, transparent 25%, white 50%, white 80%, transparent);
+  opacity: 0.4;
+}
+
+.matrix-shower__row:nth-child(1) .matrix-shower__cell:nth-child(2),
+.matrix-shower__row:nth-child(1) .matrix-shower__cell:nth-child(7),
+.matrix-shower__row:nth-child(3) .matrix-shower__cell:nth-child(4),
+.matrix-shower__row:nth-child(3) .matrix-shower__cell:nth-child(6),
+.matrix-shower__row:nth-child(5) .matrix-shower__cell:nth-child(3),
+.matrix-shower__row:nth-child(5) .matrix-shower__cell:nth-child(5) {
+  // background-color: transparent;
+  animation: cell-pulse 10s ease 10s infinite alternate;
+}
+
+.matrix-shower__row:nth-child(1) .matrix-shower__cell:nth-child(2) {
+  animation-duration: 12s;
+}
+.matrix-shower__row:nth-child(1) .matrix-shower__cell:nth-child(7) {
+  animation-duration: 7s;
+}
+.matrix-shower__row:nth-child(3) .matrix-shower__cell:nth-child(4) {
+  animation-duration: 9s;
+}
+.matrix-shower__row:nth-child(3) .matrix-shower__cell:nth-child(6) {
+  animation-duration: 6s;
+}
+.matrix-shower__row:nth-child(5) .matrix-shower__cell:nth-child(3) {
+  animation-duration: 8s;
+}
+
+@keyframes cell-pulse {
+  0% {background-color: rgba(0,0,0,0.4);}
+  100% {background-color: transparent;}
+}

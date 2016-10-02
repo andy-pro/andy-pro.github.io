@@ -1,15 +1,22 @@
-'use strict';
+const $ = require("jquery");
 
-// it's not comments below, see https://www.npmjs.com/package/gulp-include
-//=require slider/index.js
-//=require accordion/index.js
+require('./slider')($);
+require('./title_shower')($);
+require('./accordion')($);
 
-$(function() {
+$(() => {
 
-  $('#slider1').slider({
+  'use strict';
+
+  const slider1 = $('#slider1');
+
+  slider1.slider({
     speed: 300,
-    keycontrol: true
-  });
+    keycontrol: true,
+    onSlide: (next, e) => slider1.titleShower('show', next)
+    // onAfterSlide
+  })
+  .titleShower({titles: '#title-shower1'});
 
   $('#accordion1').accordion();
 

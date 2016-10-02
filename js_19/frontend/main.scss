@@ -1,6 +1,116 @@
-@import "../../public/bower_components/normalize-css/normalize.css";
-
+@import "../../node_modules/normalize-css/normalize.css";
 @import "_fonts/index";
+
+$background-dark: #2a2d32;
+$background-gray: #35383c;
+$background-light: #f7f7f7;
+
+$blue: #248cec;
+$orange: #f4b60d;
+
+h1,h2,h3,h4,h5,h6 {
+  color: #2a2b2e;
+  margin: 0;
+}
+a:hover {
+  color: $blue;
+}
+
+body {
+  font: normal 13px/1.53 'Ubuntu', sans-serif;
+  color: #8a8a8a;
+  background-color: white;
+}
+ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 1160px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.pv20-40 {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+.p30 {
+  padding: 30px;
+}
+.pt30 {
+  padding-top: 30px;
+}
+.pv40-40 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.pv60-60 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.wrapper {
+  // overflow: hidden;
+  position: relative;
+}
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+
+nav {
+  background-color: $background-dark;
+  margin: 40px 0;
+}
+
+.overall-dark {
+  background-color: $background-dark;
+}
+.overall-gray {
+  background-color: $background-gray;
+}
+.overall-light {
+  background-color: $background-light;
+}
+
+// columns
+[class^="col-1-"] {
+  float: left;
+}
+.col-1-2 {
+  width: 50%;
+}
+.col-1-3 {
+  width: 33.3%;
+}
+.col-1-4 {
+  width: 25%;
+}
+
+// logo
+.logo {
+  display: inline-block;
+  margin-top: 30px;
+}
+.logo__title {
+  display: inline-block;
+  h1 {
+    line-height: 1;
+    color: #434343;
+  }
+  h4 {
+    color: #bbb;
+    font-weight: 300;
+    letter-spacing: 1.2px;
+  }
+}
 
 /* icons settings */
 [class^="icon-"], [class*=" icon-"] {
@@ -23,91 +133,17 @@
   background-position: 0 -119px;
 }
 
-$background-dark: #2a2d32;
-$background-light: #f7f7f7;
-
-$link-color: #248cec;
-
-h1,h2,h3,h4,h5,h6 {
-  color: #2a2b2e;
-  margin: 0;
-}
-a:hover {
-  color: $link-color;
-}
-
-body {
-  font: normal 13px/1.53 'Ubuntu', sans-serif;
-  color: #8a8a8a;
-  background-color: white;
-}
-ol, ul {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-  color: inherit;
-}
-.container {
-  width: 1160px;
-  margin: 0 auto;
-  overflow: hidden;
-}
-nav {
-  background-color: $background-dark;
-  margin: 40px 0;
-}
-.overall-dark {
-  background-color: $background-dark;
-}
-.overall-light {
-  background-color: $background-light;
-}
-.col-1-2 {
-  width: 50%;
-  float: left;
-}
-.logo {
-  display: inline-block;
-  margin-top: 30px;
-}
-.logo__title {
-  display: inline-block;
-}
-.logo__title h1 {
-  line-height: 1;
-  color: #434343;
-}
-.logo__title h4 {
-  color: #bbb;
-  font-weight: 300;
-  letter-spacing: 1.2px;
-}
-.wrapper {
-  overflow: hidden;
-}
-.close {
-  font: bold 20px sans-serif;
-  float: right;
-  margin: -12px -24px 0 0;
-  opacity: 0.2;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-.close:after {
-  content: '×';
-}
-.close:hover {
-  opacity: 0.5;
-}
-
 @import "menu_social/index";
 @import "search_form/index";
 @import "menu_nav/index";
 @import "slider/index";
+@import "title_shower/index";
+@import "matrix_shower/index";
 @import "brief/index";
-@import "gallery/index";
+@import "gallery_bg/index";
 @import "preview_post/index";
 @import "accordion/index";
 @import "brands/index";
+@import "menu_v/index";
+@import "footer/index";
+@import "menu_icon/index";

@@ -1,0 +1,7 @@
+mixin matrixShower(y, x)
+  .matrix-shower(id!=attributes.id class!=attributes.class)
+    - for (var i = 0; i < y; i++)
+      .matrix-shower__row
+        - for (var j = 0; j < x; j++)
+          .matrix-shower__cell= i+'-'+j
+      .matrix-shower__hr

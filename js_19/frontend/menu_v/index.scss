@@ -1,0 +1,12 @@
+.menu-v__title {
+  font: 13px/36px Arial, sans-serif;
+  color: white;
+  font-weight: 600;
+}
+.menu-v__item {
+  padding: 10px 0;
+  margin-right: 40px;
+}
+.menu-v__item + li{
+  border-top: 1px solid #393c40;
+}

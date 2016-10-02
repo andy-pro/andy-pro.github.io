@@ -4,11 +4,15 @@ extends ./layout
 include ./menu_social/index
 include ./menu_nav/index
 include ./slider/index
+include ./matrix_shower/index
+include ./title_shower/index
 include ./brief/index
-include ./gallery/index
+include ./gallery_bg/index
 include ./preview_post/index
 include ./accordion/index
 include ./brands/index
+include ./menu_v/index
+include ./menu_icon/index
 
 block title
   title= pageTitle
@@ -26,26 +30,39 @@ block content
       nav.wrapper
         +menuNav(menu_nav_data)
         include ./search_form/index
-    +Slider(slider1_data)(id='slider1')
+    .wrapper
+      +Slider(slider1_data)(id='slider1')
+      +matrixShower(4,7)(id='matrix-shower1')
+      +titleShower(slider1_data)(id='title-shower1')
 
   ='\n'
 
   main
     .container
-      +Brief(brief_data)
+      each item in brief_data
+        .col-1-3
+          +Brief(item)
     .overall-dark
-      .container
-        h2 Our Services
-        .wrapper
-          +Gallery(gallery_data)
+      .container.pt30
+        +Gallery(gallery_data)
     .overall-light
-      #news.container
+      #news.container.pv60-60
         .col-1-2
           h2 Latest News
-          +previewPost(preview_post_data[0])
-          +previewPost(preview_post_data[1])
+          +previewPost(preview_post_data[0])(class='pt30')
+          +previewPost(preview_post_data[1])(class='pt30')
         .col-1-2
           h2 Banners Place
-          +Accordion(accordion1_data)(id='accordion1')
-    .container
+          +Accordion(accordion1_data)(id='accordion1' class='pt30')
+
+  footer
+    .container.pv20-40
       +Brands(brands_data)
+    .overall-dark
+      #shop.container.pv20-40
+        each item in menu_v_data
+          .col-1-4
+            +menuV(item)
+    .overall-gray
+      .container
+        +menuIcon(contacts_data)

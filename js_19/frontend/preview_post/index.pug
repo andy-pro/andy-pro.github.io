@@ -1,5 +1,5 @@
 mixin previewPost(post)
-  .preview-post
+  .preview-post(class!=attributes.class)
     .preview-post__img
       img(src='dist/img/preview_post/'+post.img)
       div

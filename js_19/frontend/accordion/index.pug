@@ -1,8 +1,7 @@
 mixin Accordion(items)
-  .accordion(id=attributes.id)
+  .accordion(id!=attributes.id class!=attributes.class)
     each item in items
       .accordion__header
         .accordion__status
-          h3 +
         .accordion__title= item.title
       p.accordion__text= item.text

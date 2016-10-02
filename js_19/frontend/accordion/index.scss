@@ -1,25 +1,40 @@
 .accordion__header {
-  margin-top: 5px;
+  margin-bottom: 5px;
   background-color: white;
+  color: #2a2d32;
+  transition: all 0.2s;
 }
 .accordion__header > div{
   border: 1px solid #e8e8e8;
   line-height: 40px;
   cursor: pointer;
 }
+.accordion__header:hover {
+  text-shadow: 1px 1px 3px #999;
+}
 .accordion__status {
   float: left;
   width: 40px;
   text-align: center;
+  font-family: monospace;
 }
 .accordion__title {
   padding-left: 10px;
   // margin-left: 40px;
   overflow: hidden;
   text-transform: uppercase;
-  color: #2a2d32;
 }
 .accordion__text {
   font-family: Arial, sans-serif;
   display: none;
+}
+.accordion__active {
+  background-color: $orange;
+  color: white;
+}
+.accordion__status:after {
+  content: '+';
+}
+.accordion__active .accordion__status:after {
+  content: '-';
 }

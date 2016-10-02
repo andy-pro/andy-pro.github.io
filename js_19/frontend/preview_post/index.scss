@@ -1,14 +1,14 @@
 .preview-post > div {
   display: table-cell;
   vertical-align: top;
-  padding: 16px;
+  padding: 0 16px;
 }
 .preview-post__img {
   position: relative;
 }
 .preview-post__img > div {
   position: absolute;
-  top: 26px;
+  top: 13px;
   left: 0;
   font-size: 14px;
 }
@@ -18,13 +18,13 @@
   padding: 10px 0;
 }
 .preview-post__month {
-  background-color: #248cec;
+  background-color: $blue;
   color: white;
 }
 .preview-post__date {
-  background-color: #f4b60d;
+  background-color: $orange;
   color: black;
 }
 .preview_post__info a {
-  color: $link-color;
+  color: $blue;
 }

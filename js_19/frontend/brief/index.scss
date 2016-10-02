@@ -1,17 +1,13 @@
 .brief {
   padding: 20px 0;
 }
-.brief__item {
-  width: 33.3%;
-  display: inline-block;
+.brief > div{
+  display: table-cell;
+  vertical-align: top;
 }
 .brief__index {
   font-size: 90px;
   color: #ddd;
-}
-.brief__item > div{
-  display: table-cell;
-  vertical-align: top;
 }
 .brief__body {
   padding: 30px 20px;

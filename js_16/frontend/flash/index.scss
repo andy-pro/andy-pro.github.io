@@ -1,0 +1,22 @@
+$flash-color: #b98 !default;
+$flash-border-color: #888 !default;
+$flash-font-color: #fff !default;
+
+#flash {
+  background-color: $flash-color;
+  border-color: $flash-border-color;
+  color: $flash-font-color;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  padding: 10px 30px;
+  display: none;
+  // min-height: 50px;
+  min-width: 150px;
+  max-width: 200px;
+  position: fixed;
+  right: 30px;
+  top: 30px;
+  word-wrap: break-word;
+  z-index: 10;
+}

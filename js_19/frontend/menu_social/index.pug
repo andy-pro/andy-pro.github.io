@@ -1,14 +1,13 @@
 mixin menuSocial
   -
     var items = [
-      {href: '//facebook.com', class: 'facebook'},
-      {href: '//twitter.com', class: 'twitter'},
-      {href: '//rss.com', class: 'rss'},
-      {href: '//linkedin.com', class: 'linkedin2'},
-      {href: '//skype.com', class: 'skype'}
+      {href: '//facebook.com', icon: 'facebook'},
+      {href: '//twitter.com', icon: 'twitter'},
+      {href: '//rss.com', icon: 'rss'},
+      {href: '//linkedin.com', icon: 'linkedin2'},
+      {href: '//skype.com', icon: 'skype'}
     ];
 
   .menu-social
     each item in items
-      a.menu-social__link(href=item.href)
-        span(class='icon-'+item.class)
+      a.menu-social__link(class='icon-'+item.icon href=item.href)

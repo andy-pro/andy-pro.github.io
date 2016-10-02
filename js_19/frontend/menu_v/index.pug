@@ -1,0 +1,6 @@
+mixin menuV(data)
+  ul.menu-v(class!=attributes.class)
+    p.menu-v__title= data.title
+    each item in data.items
+      li.menu-v__item
+        a.menu-v__link(href=item.href)= item.title

@@ -1,8 +1,11 @@
 mixin Slider(data)
-  div(id=attributes.id style='width:'+data.width).slider
+  .slider(id!=attributes.id style='width:'+data.width)
     .slider__slot
       .slider__tape
         each item in data.items
-          img(src='dist/img/slider/'+item.src width='1160' title=item.title)
+          img(src='dist/img/slider/'+item.src width=data.width)
     a.slider__prev(href='#') ‹
     a.slider__next(href='#') ›
+    .slider__shot
+      each item in data.items
+        a(href="#" title=item.title)

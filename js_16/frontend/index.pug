@@ -1,0 +1,12 @@
+extends ./layout
+
+//- mixins
+include ./menu_social/index
+
+block title
+  title SVG Menu Demo
+
+block content
+  include ./flash/index
+  button.m30 Reset
+  +menuSocial(class='p30')

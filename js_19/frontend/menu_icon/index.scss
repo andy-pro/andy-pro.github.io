@@ -1,0 +1,17 @@
+.menu-icon {
+  font: 12px/60px Arial, sans-serif;
+  span {
+    padding-right: 8px;
+    position: relative;
+    top: 2px;
+  }
+}
+.menu-icon__item.pull-left {
+  padding-right: 40px;
+}
+.menu-icon__item.pull-right {
+  padding-left: 40px;
+}
+.menu-icon__link:hover {
+  // color: white;
+}

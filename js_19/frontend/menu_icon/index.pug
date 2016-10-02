@@ -1,0 +1,7 @@
+mixin menuIcon(items)
+  ul.menu-icon(class!=attributes.class)
+    each item in items
+      li.menu-icon__item(class=item.class)
+        if item.icon
+          span(class='icon-'+item.icon)
+        a.menu-icon__link(href=item.href)= item.title
