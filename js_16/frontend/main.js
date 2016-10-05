@@ -1,12 +1,14 @@
-var $ = require("jquery");
+'use strict';
 
-require('./flash')($);
+import 'normalize-css/normalize.css';
+import './main.scss';
+import './close-btn/index.scss';
+import './flash';
+import './menu-social';
 
 $(() => {
 
-  'use strict';
-
-  $('#flash').flash(); // flash plugin setup
+  $('#flash').flash();
 
   $.flash('<h3>Hint:</h3>' +
     'Click on icon to increase<br>' +

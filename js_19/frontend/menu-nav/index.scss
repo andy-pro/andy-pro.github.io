@@ -1,0 +1,20 @@
+@import "../vars";
+
+.menu-nav {
+  font: 14px/60px 'Ubuntu Condensed', sans-serif;
+  display: inline-block;
+}
+.menu-nav__item {
+  padding: 0 40px;
+  display: inline-block;
+  border-right: 1px solid black;
+  &:active {
+    background-color: $blue;
+  }
+}
+.menu-nav__link {
+  color: white;
+  &:hover {
+    color: $orange;
+  }
+}

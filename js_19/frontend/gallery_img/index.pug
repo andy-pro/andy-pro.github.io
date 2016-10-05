@@ -1,9 +1,0 @@
-mixin Gallery(data)
-  .gallery
-    h2.gallery__header= data.header
-    each item in data.items
-      figure.gallery__item
-        a.gallery__link(href='#')
-          .gallery__img
-            img(src='dist/img/gallery/'+item.src)
-          figcaption.gallery__title!= item.title

@@ -1,0 +1,25 @@
+@import "../vars";
+
+.title-shower__title {
+  word-spacing: 1000px;
+  font: 50px/46px Ubuntu;
+  text-transform: uppercase;
+  color: white;
+  display: none;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
+.title-shower__ground{
+  background-color: rgba(48,48,48,0.8);
+  height: 88px;
+}
+.title-shower__text {
+  padding: 20px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  &:first-line {
+    color: $orange;
+  }
+}

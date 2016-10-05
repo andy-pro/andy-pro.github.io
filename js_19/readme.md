@@ -1,10 +1,26 @@
-# Урок 19-20
+# Урок 19
 
 Домашнее задание:
 
-1. Сверстать [макет](/js_19-20/homework19_20.psd) используя `SCSS`, `BEM`. Так же прикрутить слайдер с помощью `jQuery`. Кроссбраузерность и пиксельная точность не обязательны
-2. Скопировать себе в script.js [data.json](/js_19-20/data.json), сделать из него обычный javascript-массив (распарсить). С помощью `lodash` получить несколько массивов: 1. Массив скиллов (поле skills) всех людей, не должно быть повторяющихся скиллов, так же они должны быть отсортированы по алфавиту; 2. Массив имен (поле name) людей, отсортированных в зависимости от количества их друзей (friends); 3. Массив всех друзей всех пользователей, не должно быть повторяющихся людей
+Сверстать [макет](/js_19-20/homework19_20.psd) используя `SCSS`, `BEM`. Так же прикрутить слайдер с помощью `jQuery`. Кроссбраузерность и пиксельная точность не обязательны
 
+#### Installation
+```
+npm install
+```
+
+#### Build
+
+- ```npm run pub``` - for publication (*minimized*)  
+
+- ```npm run dev``` or ```gulp``` - for development (*watch, source map*)
+
+
+#### Code analysis [tool](http://jshint.com/)
+
+- ```npm run jshint``` or ```gulp jshint```
+
+---
 
 Полезные материалы:
 
@@ -18,8 +34,3 @@
 8. [SASS против LESS](https://habrahabr.ru/post/144309/)
 9. [CSS-препроцессоры и преимущество их использования](http://zencoder.ru/css/css-sass-less-stylus/)
 10. [LESS](http://lesscss.org/), [Stylus](http://stylus-lang.com/) - аналоги SASS
-11. [Документация lodash](https://lodash.com/)
-12. [lodash (underscore) — знай свою стандартную библиотеку](https://habrahabr.ru/post/217515/)
-13. [Хватит писать циклы for. Пришло время использовать Underscore](http://frontender.info/stop-writing-for-loops-start-using-underscorejs/)
-14. [Lodash: 10 Javascript Utility Functions That You Should Probably Stop Rewriting](http://colintoh.com/blog/lodash-10-javascript-utility-functions-stop-rewriting)
-15. [Введение в Source Maps](https://habrahabr.ru/post/178743/)

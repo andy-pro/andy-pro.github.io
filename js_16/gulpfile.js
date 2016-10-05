@@ -19,11 +19,6 @@ const gulp = require('gulp'),
       util = require('gulp-util'),
       watch = require('gulp-watch'),
       data = require('gulp-data'),
-      sass = require('gulp-sass'),
-      cssimport = require("gulp-cssimport"),
-      cleanCSS = require('gulp-clean-css'),
-      urlAdjuster = require('gulp-css-url-adjuster'),
-      prefixer = require('gulp-autoprefixer'),
       plumber = require('gulp-plumber'),
       pug = require('gulp-pug'),
       webpack = require('webpack'),
@@ -47,8 +42,7 @@ const prj = {
     fonts: 'dist/fonts'
   },
   watch: {
-    css: 'frontend/**/*.scss',
-    js: 'frontend/**/*.js',
+    js: 'frontend/**/*.{js,scss,pug}',
     html: ['frontend/**/*.pug', 'frontend/*.json'],
     img: 'frontend/**/*.{jpg,jpeg,png}',
     fonts: 'frontend/_fonts/*.{eot,svg,ttf,woff}'
@@ -61,7 +55,8 @@ var webpackConfig = {
   entry: prj.src.js,
   output: prj.dest.js,
   externals: {
-    jquery: '$'
+    jquery: '$',
+    lodash: '_'
   },
   plugins: [
     new webpack.DefinePlugin({
@@ -77,6 +72,18 @@ var webpackConfig = {
         query: {
           presets: ['es2015', 'stage-0']
         }
+      }, {
+        test: /\.css$/,
+        loader: "style!css"
+      }, {
+        test: /\.scss$/,
+        loader: "style!css!sass"
+      }, {
+        test: /\.pug$/,
+        loader: "pug"
+      }, {
+        test: /\.json$/,
+        loader: "json"
       }
     ]
   }
@@ -118,18 +125,6 @@ gulp.task('html:build', () => gulp
   .pipe(gulp.dest(prj.dest.html))
 );
 
-gulp.task('css:build', () => gulp
-  .src(prj.src.css)
-  .pipe(plumber())
-  .pipe(sass())
-  .pipe(cssimport())
-  .pipe(urlAdjuster({prepend: '../'}))
-  // .pipe(prefixer({browsers:['ie >= 10', 'ff >= 5', 'Opera >= 15', 'last 2 Chrome versions']}))
-  .pipe(prefixer('last 10 versions'))
-  .pipe(production ? cleanCSS({keepSpecialComments: 0}) : util.noop())
-  .pipe(gulp.dest(prj.dest.css))
-);
-
 gulp.task('img:build', () => gulp
   .src(prj.src.img)
   .pipe(gulp.dest(prj.dest.img))
@@ -141,7 +136,6 @@ gulp.task('fonts:build', () => gulp
 );
 
 gulp.task('build', [
-  'css:build',
   'js:build',
   'html:build',
   'img:build',
@@ -149,7 +143,6 @@ gulp.task('build', [
 ]);
 
 gulp.task('watch', () => {
-  watch(prj.watch.css,   () => gulp.start('css:build'));
   watch(prj.watch.js,    () => gulp.start('js:build'));
   watch(prj.watch.html,  () => gulp.start('html:build'));
   watch(prj.watch.img,   () => gulp.start('img:build'));

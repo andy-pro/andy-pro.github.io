@@ -1,12 +1,4 @@
-@import "../../node_modules/normalize-css/normalize.css";
-@import "_fonts/index";
-
-$background-dark: #2a2d32;
-$background-gray: #35383c;
-$background-light: #f7f7f7;
-
-$blue: #248cec;
-$orange: #f4b60d;
+@import "vars";
 
 h1,h2,h3,h4,h5,h6 {
   color: #2a2b2e;
@@ -117,7 +109,7 @@ nav {
   font-size: 16px;
 }
 [class^="pngicon-"] {
-  background: url('img/icons.png') 0 0 no-repeat;
+  background: url('icons.png') 0 0 no-repeat;
   width: 36px;
   height: 36px;
   display: inline-block;
@@ -132,18 +124,3 @@ nav {
 .pngicon-delivery {
   background-position: 0 -119px;
 }
-
-@import "menu_social/index";
-@import "search_form/index";
-@import "menu_nav/index";
-@import "slider/index";
-@import "title_shower/index";
-@import "matrix_shower/index";
-@import "brief/index";
-@import "gallery_bg/index";
-@import "preview_post/index";
-@import "accordion/index";
-@import "brands/index";
-@import "menu_v/index";
-@import "footer/index";
-@import "menu_icon/index";

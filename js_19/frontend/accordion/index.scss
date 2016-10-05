@@ -1,16 +1,18 @@
+@import "../vars";
+
 .accordion__header {
   margin-bottom: 5px;
   background-color: white;
   color: #2a2d32;
   transition: all 0.2s;
-}
-.accordion__header > div{
-  border: 1px solid #e8e8e8;
-  line-height: 40px;
-  cursor: pointer;
-}
-.accordion__header:hover {
-  text-shadow: 1px 1px 3px #999;
+  &:hover {
+    text-shadow: 1px 1px 3px #999;
+  }
+  & > div{
+    border: 1px solid #e8e8e8;
+    line-height: 40px;
+    cursor: pointer;
+  }
 }
 .accordion__status {
   float: left;

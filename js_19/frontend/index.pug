@@ -1,18 +1,18 @@
 extends ./layout
 
 //- mixins
-include ./menu_social/index
-include ./menu_nav/index
+include ./menu-social/index
+include ./menu-nav/index
 include ./slider/index
-include ./matrix_shower/index
-include ./title_shower/index
+include ./matrix-shower/index
+include ./title-shower/index
 include ./brief/index
-include ./gallery_bg/index
-include ./preview_post/index
+include ./gallery-bg/index
+include ./preview-post/index
 include ./accordion/index
 include ./brands/index
-include ./menu_v/index
-include ./menu_icon/index
+include ./menu-v/index
+include ./menu-icon/index
 
 block title
   title= pageTitle
@@ -29,7 +29,7 @@ block content
         +menuSocial
       nav.wrapper
         +menuNav(menu_nav_data)
-        include ./search_form/index
+        include ./search-form/index
     .wrapper
       +Slider(slider1_data)(id='slider1')
       +matrixShower(4,7)(id='matrix-shower1')

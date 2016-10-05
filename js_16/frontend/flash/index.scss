@@ -1,6 +1,7 @@
 $flash-color: #b98 !default;
 $flash-border-color: #888 !default;
 $flash-font-color: #fff !default;
+$flash-link-color: #333 !default;
 
 #flash {
   background-color: $flash-color;
@@ -19,4 +20,8 @@ $flash-font-color: #fff !default;
   top: 30px;
   word-wrap: break-word;
   z-index: 10;
+  a {
+    color: $flash-link-color;
+    text-decoration: underline;
+  }
 }
