@@ -1,0 +1,13 @@
+.jq-checkbox {
+  cursor: pointer;
+  margin-left: -16px;
+  span {
+  	width: 17px;
+  	height: 17px;
+  	display: inline-block;
+  	background: url(checkbox.png);
+    position: relative;
+    top: 3px;
+    margin: 1px 4px;
+  }
+}

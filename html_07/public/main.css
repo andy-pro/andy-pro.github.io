@@ -207,21 +207,24 @@ h6 {
   margin: 3px;
   cursor: pointer;
 }
-.icon-circle-dark-off {
-  background: rgba(40,40,60,0.7);
+.icon-circle-dark {
+  background: rgb(60,60,80);
+  transition: background-color 0.3s;
 }
-.icon-circle-dark-on {
+.icon-circle-dark:hover {
   background: #ececec;
   border: 3px solid #446;
 }
-.icon-circle-light-off {
+.icon-circle-light {
   background: #fff;
   border: 1px solid #e3e3e3;
 }
-.icon-circle-light-on {
-  background: -moz-linear-gradient(#888, #222);
-  background: -o-linear-gradient(#888, #222);
-  background: linear-gradient(#888, #222);
+.icon-circle-light:hover {
+  background-color: #555;
+  transition: background-color 0.3s;
+  /*background: -moz-linear-gradient(#888, #222);*/
+  /*background: -o-linear-gradient(#888, #222);*/
+  /*background: linear-gradient(#888, #222);*/
   border: 3px solid #e3e3e3;
 }
 .menu {
@@ -344,7 +347,7 @@ h6 {
   background-size: cover;
   color: #fff;
 }
-.header >.container {
+ .header >.container {
   height: 280px;
   padding-top: 70px;
 }

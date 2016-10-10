@@ -28,9 +28,14 @@
   "dependencies": {
     "normalize-css": "^2.3.1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/andy-pro/andy-pro.github.io/tree/master/js_21-22"
+  },
   "scripts": {
     "dev": "gulp",
     "pub": "gulp build --production",
-    "jshint": "gulp jshint"
+    "jshint": "gulp jshint",
+    "test": "jasmine"
   }
 }

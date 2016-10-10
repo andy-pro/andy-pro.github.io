@@ -12,9 +12,9 @@ import './index.scss';
 
   let methods = {
 
-    init: function(params) {
+    init: function(params = {}) {
+
       let self = this;
-      params = params || {};
 
       this.find('.slider__prev, .slider__next')
         .on('click.slider', e => !methods.slide.call(this, /__next/.test(e.target.className), e));
@@ -55,6 +55,7 @@ import './index.scss';
       methods.slide.call(this, 0);
 
       return this;
+
     },
 
     slide: function(next, e) {

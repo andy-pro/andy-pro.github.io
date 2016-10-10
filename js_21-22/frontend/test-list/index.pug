@@ -1,0 +1,14 @@
+form.test-list
+  h3.test-list__title= title
+  ol
+    each item, _qi in items
+      li.test-list__question= item.question + ((item.right.length > 1) ? ' (выберите ' + item.right.length + ' варианта)' : '')
+        ul
+          each answer, _ai in item.answers
+            li.test-list__answer
+              label.jq-checkbox
+                input(type='checkbox' name=_qi+'q_'+_ai+'a')
+                span
+                = answer
+  .center
+    button.btn-default(type='submit') Проверить мои результаты

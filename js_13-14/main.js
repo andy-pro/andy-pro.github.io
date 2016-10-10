@@ -135,12 +135,14 @@ $(function() {
         var k = e.keyCode;
         if (e.target === self[0] || k == 27 || k == 13) {
           methods.hide.call(self);
-          if (k == 13) self.data().action_ok();
+          if (k == 13 && typeof self.data().action_ok === 'function')
+            self.data().action_ok();
         }
       });
       this.find('[data-action]').on('click', function() {
         methods.hide.call(self);
-        if ($(this).data().action === 'ok') self.data().action_ok();
+        if ($(this).data().action === 'ok' && typeof self.data().action_ok === 'function')
+          self.data().action_ok();
         return false;
       });
       return this;
@@ -151,7 +153,7 @@ $(function() {
       this.find('.modal-title').text(title);
       this.find('.modal-body').text(body);
       this.find('[data-action=ok]').text(title_ok);
-      return this.fadeIn('fast').data('action_ok', action_ok || function(){});
+      return this.fadeIn('fast').data('action_ok', action_ok);
     },
 
     hide: function() {

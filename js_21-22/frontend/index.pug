@@ -1,0 +1,12 @@
+extends ./layout
+
+block title
+  title Component testing
+
+block content
+  #test-suite.container
+    .well.center
+      a.close(href="/" title="Back to home")
+      | Тесты по программированию
+
+  include ./modal/index

@@ -39,6 +39,8 @@
         width: 50%;
         vertical-align: top;
         font-size: 14px;
+        padding: 5px;
+        box-sizing: border-box;
       }
       #main h3 {
         font: bold 1.5em cursive;
@@ -77,6 +79,20 @@
       .footer a {
         margin-right: 10px;
         line-height: 60px;
+      }
+
+      @media screen and (max-width: 679px) {
+
+        #main {
+          width: 340px;
+          background-repeat: repeat-y;
+          background-position: top left;
+        }
+        #main > div {
+          display: block;
+          width: auto;
+        }
+
       }
     </style>
 
@@ -144,7 +160,8 @@
               {href: 'js_17-18/index-grunt.html', title: '17 - Grunt'},
               {href: 'js_17-18/index-gulp.html', title: '18 - Gulp'},
               {href: 'js_19', title: '19 - Build Home'},
-              {href: 'js_20', title: '20 - LoDash Collections'}
+              {href: 'js_20', title: '20 - LoDash Collections'},
+              {href: 'js_21-22', title: '21 - Component testing'}
             ]
           }
         ]

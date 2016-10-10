@@ -14,10 +14,13 @@ $(function() {
       },
 
       $details = $('#user-details'),
+      $target = $('main'),
       timerId,
       cache;
 
   $('#flash').flash(); // flash plugin setup
+
+  $target.on('mouseover mouseout', 'a.user__link', getDetails);
 
   $('#search-form').submit(function() {
 
@@ -48,10 +51,7 @@ $(function() {
         $.flash(hint, 10);
         hint = false;
       }
-      $('main')
-        .addClass('content')
-        .html(tmpl.users(data))
-        .on('mouseover mouseout', 'a.user__link', getDetails);
+      $target.addClass('content').html(tmpl.users(data));
     });
 
     return false;

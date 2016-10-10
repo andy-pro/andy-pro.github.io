@@ -1,16 +1,16 @@
-/*! simple flash jquery plugin */
-/**
-  add to main html page:
-    include ./flash/index
+/** simple flash jquery plugin
 
-  add to main js page:
-    import './flash';
+  usage:
+    add to js:
+      import './flash';
+    add to html:
+      include ./flash/index
 
   usage example:
-    $('#flash').flash(); // setup
-    $.flash('message', 2); // show message during 2 sec.
-    $.flash('message'); // show message infinitely
-    $.flash(); // close flash
+  $('#flash').flash(); // setup
+  $.flash('message', 2); // show message during 2 sec.
+  $.flash('message'); // show message infinitely
+  $.flash(); // close flash
 */
 
 import './index.scss';
@@ -19,7 +19,7 @@ import './index.scss';
 
   'use strict';
 
-   $.fn.extend({
+  $.fn.extend({
     flash: function() {
       let content = this.find('span');
       let close = () => this.clearQueue().slideUp('slow');

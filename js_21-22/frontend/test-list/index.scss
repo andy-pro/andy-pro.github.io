@@ -1,0 +1,15 @@
+.test-list {
+  margin-bottom: 50px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+.test-list__title {
+  text-align: center;
+}
+.test-list__question {
+  margin-bottom: 10px;
+}
+.test-list__answer {
+  overflow: hidden;
+  font-size: 12px;
+}
