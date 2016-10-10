@@ -19,7 +19,9 @@ npm install
 
 #### Testing
 
-- ```npm test``` or ```jasmine```
+- ```npm test``` or ```jasmine``` - cli
+
+- ```gulp jasmine``` - browser, localhost:8888
 
 #### Code analysis [tool](http://jshint.com/)
 

@@ -26,6 +26,7 @@
     "gulp-html-extend": "^1.1.6",
     "gulp-include": "^2.3.1",
     "gulp-jade": "^1.1.0",
+    "gulp-jasmine-browser": "^1.7.0",
     "gulp-jshint": "^2.0.1",
     "gulp-plumber": "^1.1.0",
     "gulp-pug": "^3.0.4",
@@ -48,6 +49,10 @@
     "chosen-js": "^1.6.2",
     "json-pretty": "0.0.1",
     "normalize-css": "^2.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/andy-pro/andy-pro.github.io"
   },
   "scripts": {
     "start": "live-server"

@@ -155,7 +155,7 @@ describe("Test List, logic part:", function() {
 
   //=======================================================================
 
-  describe("shuffle array:", function() {
+  describe("shuffle array (see shuffle result in console):", function() {
 
     var shuffleArray = logic.shuffleArray;
 
@@ -163,6 +163,11 @@ describe("Test List, logic part:", function() {
     beforeEach(function() {
       a1 = [0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f'];
       a2 = [0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f'];
+    });
+    afterEach(function() {
+      console.log();
+      console.log(a1);
+      console.log(a2);
     });
 
     it("test 1 - source arrays are equal", function() {
@@ -184,6 +189,9 @@ describe("Test List, logic part:", function() {
       expect(shuffleArray(a1)).not.toEqual( a2 );
     });
     it("test 3.3 - after shuffle: not equal", function() {
+      expect(shuffleArray(a1)).not.toEqual( a2 );
+    });
+    it("test 3.4 - after shuffle: not equal", function() {
       expect(shuffleArray(a1)).not.toEqual( a2 );
     });
     it("test 4 - should shuffle the original array", function() {

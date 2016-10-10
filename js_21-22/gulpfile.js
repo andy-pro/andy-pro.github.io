@@ -1,5 +1,6 @@
 /*
   tasks:
+    jasmin
     jshint
     default
       watch
@@ -21,8 +22,10 @@ const gulp = require('gulp'),
       data = require('gulp-data'),
       plumber = require('gulp-plumber'),
       pug = require('gulp-pug'),
-      webpack = require('webpack'),
       jshint = require('gulp-jshint'),
+      jasmineBrowser = require('gulp-jasmine-browser'),
+      webpack = require('webpack'),
+      webpackStream = require('webpack-stream'),
       path = require('path'),
       fs = require('fs');
 
@@ -180,6 +183,15 @@ gulp.task('jshint', () => gulp
   .pipe(jshint())
   .pipe(jshint.reporter('default'))
 );
+
+gulp.task('jasmine', () => {
+  let JasminePlugin = require('gulp-jasmine-browser/webpack/jasmine-plugin'),
+      plugin = new JasminePlugin();
+  return gulp.src(['spec/**/*[sS]pec.js'])
+    .pipe(webpackStream({watch: true, output: {filename: 'spec.js'}, plugins: [plugin]}))
+    .pipe(jasmineBrowser.specRunner())
+    .pipe(jasmineBrowser.server({whenReady: plugin.whenReady}));
+});
 
 function fileExists(filePath) {
   try {
