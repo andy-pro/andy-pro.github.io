@@ -1,0 +1,83 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin: 0 0 90px;
+  background: #eaeaea url('public/img/bg.png');
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+#main {
+  background: #ccd url('public/img/back.gif') no-repeat top right;
+  font-size: 0;
+  min-height: 500px;
+  width: 680px;
+  margin: 30px auto;
+  box-shadow: 5px 5px 10px gray;
+  -webkit-box-shadow: 5px 5px 10px gray;
+  -moz-box-shadow: 5px 5px 10px gray;
+  filter: progid:DXImageTransform.Microsoft.Shadow(Color=#999999, Strength=10, Direction=135);
+}
+#main > div {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  font-size: 14px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+#main h3 {
+  font: bold 1.5em cursive;
+  text-align: center;
+  color: #077;
+}
+ul{
+  list-style:  none;
+  font: bold 1.2em/1.5em sans-serif;
+  color: #147;
+}
+ul a {
+  opacity: 0.5;
+}
+ul a:hover {
+  text-shadow: 1px 1px 3px white;
+  opacity: 0.8;
+}
+.src-link {
+  background: url(public/img/github.png);
+  position: relative;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  top: 3px;
+  left: 3px;
+}
+.footer {
+  background: #555;
+  bottom: 0;
+  color: #ccc;
+  position: absolute;
+  width: 100%;
+  text-align: right;
+}
+.footer a {
+  margin-right: 10px;
+  line-height: 60px;
+}
+
+@media screen and (max-width: 679px) {
+
+  #main {
+    width: 340px;
+    background-repeat: repeat-y;
+    background-position: top left;
+  }
+  #main > div {
+    display: block;
+    width: auto;
+  }
+
+}

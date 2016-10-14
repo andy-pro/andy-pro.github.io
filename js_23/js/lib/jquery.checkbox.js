@@ -1,23 +1,6 @@
-/** simple checkbox jquery plugin
+define(["jquery"], function($) {
 
-  usage:
-    add to your js:
-      import './jq-checkbox';
-
-    checkbox template (pug/jade example):
-
-      label.jq-checkbox
-        input(type='checkbox' name='checkbox1')
-        span
-        [= var] or [| text]
-
-    setup:
-      $('.jq-checkbox').checkbox();
-*/
-
-import './index.scss';
-
-(() => {
+  // checkbox jquery plugin
 
   'use strict';
 
@@ -53,9 +36,8 @@ import './index.scss';
   function setCheckboxImage() {
     let cb = $(this),
         pos = 0;
-    if (cb.prop('checked')) pos += 17;
-    if (cb.prop('disabled')) pos += 68;
-    else if (cb.data('hover')) pos += 34;
+    if (cb.data('hover')) pos += 29;
+    if (cb.prop('checked')) pos += 58;
     $(cb.data('image')).css("background-position", `0 -${pos}px`);
   }
 
@@ -71,4 +53,5 @@ import './index.scss';
     }
   });
 
-}).call(this);
+
+});

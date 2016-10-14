@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="fr">
-
+<!--[if IE 8 ]><html class="ie8"> <![endif]-->
+<!--[if IE 9 ]><html class="ie9"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!--><html> <!--<![endif]-->
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -10,27 +11,9 @@
   <!--[if lt IE 9]>
     <script src="http://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="http://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
-    <style media="screen">
-      .icon-circle-dark-off {
-        background: #42444d;
-      }
-      .icon-circle-light-on {
-        background: #555;
-      }
-      .slider {
-        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#40000000, endColorstr=#40000000)";
-      }
-      .quote:after {
-        -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865483, M12=0.7071067811865467, M21=-0.7071067811865467, M22=0.7071067811865483, SizingMethod='auto expand')";        }
-    </style>
   <![endif]-->
   <!--[if lt IE 10]>
     <script src="../public/bower_components/ie-classlist/classList.min.js"></script>
-    <style media="screen">
-      .about-section {
-        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#745083, endColorstr=#322539)";
-      }
-    </style>
   <![endif]-->
 </head>
 
@@ -69,10 +52,14 @@
                 </div>
                 <div class="slider__radio">
                     <div class="radio-group">
-                      <i class="icon icon-circle icon-circle-dark"></i>
-                      <i class="icon icon-circle icon-circle-dark"></i>
-                      <i class="icon icon-circle icon-circle-dark"></i>
-                      <i class="icon icon-circle icon-circle-dark"></i>
+                      <input id="slider1" type="radio" name="slider" value="slider1" checked/>
+                      <label for="slider1" class="icon icon-circle icon-circle-dark"></label>
+                      <input id="slider2" type="radio" name="slider" value="slider2"/>
+                      <label for="slider2" class="icon icon-circle icon-circle-dark"></label>
+                      <input id="slider3" type="radio" name="slider" value="slider3"/>
+                      <label for="slider3" class="icon icon-circle icon-circle-dark"></label>
+                      <input id="slider4" type="radio" name="slider" value="slider4"/>
+                      <label for="slider4" class="icon icon-circle icon-circle-dark"></label>
                     </div>
                 </div>
             </div>
@@ -115,10 +102,14 @@
                             bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl."</p>
                     </div>
                     <div class="radio-group">
-                      <i class="icon icon-circle icon-circle-light"></i>
-                      <i class="icon icon-circle icon-circle-light"></i>
-                      <i class="icon icon-circle icon-circle-light"></i>
-                      <i class="icon icon-circle icon-circle-light"></i>
+                      <input id="quote1" type="radio" name="quote" value="quote1" checked/>
+                      <label for="quote1" class="icon icon-circle icon-circle-light"></label>
+                      <input id="quote2" type="radio" name="quote" value="quote2"/>
+                      <label for="quote2" class="icon icon-circle icon-circle-light"></label>
+                      <input id="quote3" type="radio" name="quote" value="quote3"/>
+                      <label for="quote3" class="icon icon-circle icon-circle-light"></label>
+                      <input id="quote4" type="radio" name="quote" value="quote4"/>
+                      <label for="quote4" class="icon icon-circle icon-circle-light"></label>
                     </div>
                 </div>
                 <div class="content-wrapper">

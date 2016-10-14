@@ -64,6 +64,9 @@ var webpackConfig = {
     publicPath: 'dist/',
     filename: "js/[name].js"
   },
+  watchOptions: {
+    aggregateTimeout: 200
+  },
   externals: {
     jquery: '$',
     lodash: '_'
@@ -128,6 +131,7 @@ if (production) {
   );
 } else {
   webpackConfig.devtool = "cheap-inline-module-source-map";
+  webpackConfig.watch = true;
 }
 
 gulp.task("js:build", () =>
@@ -168,7 +172,7 @@ gulp.task('build', [
 ]);
 
 gulp.task('watch', () => {
-  watch(prj.watch.js,    () => gulp.start('js:build'));
+  // watch(prj.watch.js,    () => gulp.start('js:build'));
   watch(prj.watch.html,  () => gulp.start('html:build'));
   // watch(prj.watch.img,   () => gulp.start('img:build'));
   // watch(prj.watch.fonts, () => gulp.start('fonts:build'));
