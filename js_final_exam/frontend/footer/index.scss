@@ -1,0 +1,14 @@
+html {
+  min-height: 100%;
+  position: relative;
+}
+body {
+  // adjust this when it will be known footer height
+  margin-bottom: 300px;
+}
+footer {
+  border-top: 4px solid $red;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}

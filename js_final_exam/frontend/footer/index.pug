@@ -1,0 +1,10 @@
+//- mixins
+include ../menu-v/index
+
+footer
+  .container
+    .col-1-4
+      .logo URLAUBSGLÜCK
+    each item in menu_v_data
+      .col-1-4
+        +menuV(item)

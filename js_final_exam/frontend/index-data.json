@@ -1,0 +1,125 @@
+{
+
+  "pageTitle": "URLAUBSGLÜCK",
+
+  "slider1_data": [
+    {
+      "img": "slider-1.jpg",
+      "step": "STEP1",
+      "title": "Sed leo enim, condimentum",
+      "txt": "Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis."
+    }, {
+      "img": "slider-2.jpg",
+      "step": "STEP2",
+      "title": "Morbi velit risus",
+      "txt": "Nulla venenatis tempor dui in molestie. Nulla quis dictum purus, sit amet porttitor est."
+    }, {
+      "img": "slider-3.jpg",
+      "step": "STEP3",
+      "title": "Harum nihil ipsam, laudantium",
+      "txt": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni necessitatibus tempore."
+    }
+  ],
+
+  "slider2_data": [
+    {
+      "img": "slider-2.jpg",
+      "step": "STEP2",
+      "title": "Morbi velit risus",
+      "txt": "Nulla venenatis tempor dui in molestie. Nulla quis dictum purus, sit amet porttitor est."
+    }, {
+      "img": "slider-3.jpg",
+      "step": "STEP3",
+      "title": "Harum nihil ipsam, laudantium",
+      "txt": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni necessitatibus tempore."
+    }, {
+      "img": "slider-1.jpg",
+      "step": "STEP1",
+      "title": "Sed leo enim, condimentum",
+      "txt": "Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis."
+    }
+  ],
+
+  "slider3_data": [
+    {
+      "img": "slider-3.jpg",
+      "step": "STEP3",
+      "title": "Harum nihil ipsam, laudantium",
+      "txt": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni necessitatibus tempore."
+    }, {
+      "img": "slider-1.jpg",
+      "step": "STEP1",
+      "title": "Sed leo enim, condimentum",
+      "txt": "Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis."
+    }, {
+      "img": "slider-2.jpg",
+      "step": "STEP2",
+      "title": "Morbi velit risus",
+      "txt": "Nulla venenatis tempor dui in molestie. Nulla quis dictum purus, sit amet porttitor est."
+    }
+  ],
+
+  "partners_data": [
+    {
+      "img": "partner-1.png",
+      "icon": {"color": "red", "icon": "screen"},
+      "name": "Bradley Hunter",
+      "resume": "Based in Chicago. I love playing tennis and loud music."
+    }, {
+      "img": "partner-2.png",
+      "icon": {"color": "green", "icon": "coffee"},
+      "name": "Heather Walker",
+      "resume": "I'm a happy person that loves cats and climbing on mountains."
+    }, {
+      "img": "partner-3.png",
+      "icon": {"color": "orange", "icon": "lab"},
+      "name": "Lucas Marsha",
+      "resume": "I get my inspiration from nature and objects around me. I have a passion to colours, typography and skateboards."
+    }, {
+      "img": "partner-4.png",
+      "icon": {"color": "blue", "icon": "email"},
+      "name": "Bradley Hunter",
+      "resume": "Based in Chicago. I love playing tennis and loud music."
+    }
+  ],
+
+  "partners_data_test": [
+    {
+      "img": "test-1.jpg",
+      "icon": {"color": "red", "icon": "screen"},
+      "name": "Bradley Hunter",
+      "resume": "Based in Chicago. I love playing tennis and loud music."
+    }, {
+      "img": "test-2.jpg",
+      "icon": {"color": "green", "icon": "coffee"},
+      "name": "Heather Walker",
+      "resume": "I'm a happy person that loves cats and climbing on mountains."
+    }, {
+      "img": "test-3.jpg",
+      "icon": {"color": "orange", "icon": "lab"},
+      "name": "Lucas Marsha",
+      "resume": "I get my inspiration from nature and objects around me. I have a passion to colours, typography and skateboards."
+    }, {
+      "img": "test-4.jpg",
+      "icon": {"color": "blue", "icon": "email"},
+      "name": "Bradley Hunter",
+      "resume": "Based in Chicago. I love playing tennis and loud music."
+    }
+  ],
+
+  "menu_v_data": [
+    {
+      "title": "Company",
+      "items": [
+        {"href": "#about", "title": "About"},
+        {"href": "#contacts", "title": "Contacts"},
+        {"href": "#press", "title": "Press"},
+        {"href": "#blog", "title": "Blog"}
+      ]
+    }, {
+      "title": "Partners",
+      "items": []
+    }
+  ]
+
+}

@@ -1,0 +1,9 @@
+mixin Slider(items)
+  each item in items
+    .slider__slot
+      img.slider__img(src='dist/img/slider/' + item.img)
+      .slider__filter
+      .slider__footer
+        button.button--red.button--sm= item.step
+        .slider__title= item.title
+        .slider_txt= item.txt

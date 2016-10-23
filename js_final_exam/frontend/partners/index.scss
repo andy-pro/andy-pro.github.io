@@ -1,0 +1,72 @@
+// webinar-20.10  1:22:00, 1:27:45
+
+.partners {
+  margin: 20px 0 40px;
+}
+.partners__item {
+  // display: inline-block;
+  float: left;
+  width: 220px;
+  text-align: center;
+}
+.partners__frame {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.partners__img {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  img {
+    max-width: 120px;
+    max-height: 120px;
+    min-width: 120px;
+    min-height: 120px;
+  }
+}
+.partners__icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 4px solid white;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: white;
+  [class^="icon-"] {
+    font-size: 18px;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+  }
+}
+.partners__name {
+  font-weight: bold;
+  padding: 15px 0;
+}
+.partners__resume {
+  color: #666;
+  font-family: Roboto, sans-serif;
+  font-size: 13px;
+}
+.partners__icon--red {
+  background-color: $red;
+}
+.partners__icon--green {
+  background-color: #1cd7ad;
+}
+.partners__icon--orange {
+  background-color: #ffa507;
+}
+.partners__icon--blue {
+  background-color: #4e73db;
+}

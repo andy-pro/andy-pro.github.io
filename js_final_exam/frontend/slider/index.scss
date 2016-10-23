@@ -1,0 +1,31 @@
+.slider__slot {
+  position: relative;
+  margin: 6px;
+  font-size: 0;
+}
+.slider__filter, .slider__footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.slider__filter {
+  // background-color: rgba(255,0,0,0.5);
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+  border-radius: 4px;
+  top: 0;
+}
+.slider__footer {
+  padding: 16px;
+}
+.slider__title {
+  // font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  margin: 16px 0;
+}
+.slider_txt {
+  font-size: 13px;
+  color: #ccc;
+}
