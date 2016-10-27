@@ -25,7 +25,7 @@
 	filter: Alpha(Opacity=50);/*IE7 fix*/
 	opacity: 0.4;
 	position: absolute;
-	top: 130px;
+	/*top: 130px;*/
 }
 .owl-prev {
 	left: 20px;

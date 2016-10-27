@@ -444,7 +444,7 @@ input[type="radio"]:checked+label.icon-circle-light {
   content: '';
   position: absolute;
   right: 28px;
-  bottom: -36px;
+  bottom: -35px;
   border: 18px solid #fff;
   border-color: transparent transparent transparent #fff;
   -webkit-transform-origin: 0 0;

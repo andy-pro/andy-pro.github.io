@@ -1,12 +1,13 @@
 header.header
   .container
-    .header__logo URLAUBSGLÜCK
-    .header__auth
-      button.button--empty.button--md Log in
-      button.button--transparent.button--md Sign up
     .center
+      .header__auth
+        button.btn--empty.btn--md Log in
+        button.btn--transparent.btn--md Sign up
+      a.header__logo(href='/')
+        img(src='dist/img/header/logo.png', alt='URLAUBSGLÜCK')
       .header__title Share your
         br
         | holiday dreams
-      p And find the perfect partner to fullfill it
-      button.button--red.button--md Find your holiday partner
+      .header__subtitle And find the perfect partner to fullfill it
+      button.btn--red.btn--md Find your holiday partner

@@ -4,13 +4,13 @@ $(function() {
 
   'use strict';
 
-  let opts = {
-    navigation : true,
+  var opts = {
+    navigation: true,
     // navigationText: ['<', '>'],
     navigationText: ['&lang;', '&rang;'],
-    slideSpeed : 300,
-    paginationSpeed : 400,
-    singleItem:true,
+    slideSpeed: 300,
+    paginationSpeed: 400,
+    singleItem: true,
     pagination: false
   };
 
@@ -18,18 +18,32 @@ $(function() {
   $('#carousel2').owlCarousel(opts);
   $('#carousel3').owlCarousel(opts);
 
-  var masonry = new Masonry('.grid', {
-    // itemSelector: '.grid-item',
-    // columnWidth: 310,
-    columnWidth: '.grid-sizer',
-    gutter: '.gutter-sizer',
-    itemSelector: '.grid-item'
-    // gutter: 5
+  var grid = document.getElementById('grid'),
+      form = document.getElementById('pixplorer'),
+      input = form.querySelector('input'),
+      query = 'http://api.pixplorer.co.uk/image?amount=12&size=tb';
+
+  form.addEventListener('submit', function(e) {
+    var val = input.value,
+        url = query + (val ? '&word=' + val : '');
+    pixplorer.start(url);
+    e.preventDefault();
   });
 
-  var pixplorer = new Pixplorer('#pixplorer', {
-    // url: 'http://api.pixplorer.co.uk/image?',
-    url: 'http://api.pixplorer.co.uk/image?amount=10&size=tb'    
+  var pixplorer = new Pixplorer({
+    target: grid,
+    onLoad: initMasonry
   });
+
+  form.dispatchEvent(new Event('submit'));
+
+  function initMasonry() {
+    new Masonry(grid, {
+      columnWidth: '.grid__sizer',
+      gutter: '.grid__gutter',
+      itemSelector: '.grid__item',
+      transitionDuration: '0.5s'
+    });
+  }
 
 });

@@ -1,12 +1,22 @@
 // webinar-20.10  1:22:00, 1:27:45
 
 .partners {
-  margin: 20px 0 40px;
+  margin: 20px auto;
+  @include respond-to(desktop) {
+    width: 100%;
+  }
+  @include respond-to(tablet) {
+    width: 470px;
+  }
+  @include respond-to(mobile) {
+    width: 235px;
+  }
 }
 .partners__item {
   // display: inline-block;
+  margin: 10px;
   float: left;
-  width: 220px;
+  width: 215px;
   text-align: center;
 }
 .partners__frame {

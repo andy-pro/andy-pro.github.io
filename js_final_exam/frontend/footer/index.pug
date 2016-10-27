@@ -1,10 +1,12 @@
 //- mixins
 include ../menu-v/index
 
-footer
+footer.footer
   .container
-    .col-1-4
-      .logo URLAUBSGLÜCK
+    a.footer__item.footer__logo(href='/')
+      img(src='dist/img/footer/logo.png', alt='URLAUBSGLÜCK')
     each item in menu_v_data
-      .col-1-4
-        +menuV(item)
+        +menuV(item)(class='footer__item')
+    a.footer__item.footer__designed(href='//www.areto.com') DESIGNED BY
+      br
+      img(src='dist/img/footer/designed-logo.png', alt='ARETO')

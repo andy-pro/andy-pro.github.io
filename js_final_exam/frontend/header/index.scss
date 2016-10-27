@@ -1,12 +1,43 @@
 .header {
-  background: #966 url('img/header/bg-1440.jpg') center 0 no-repeat;
+  background-image: url('img/header/bg-1440.jpg');
+  background-color: #966;
+  background-position: center 0;
+  background-repeat: no-repeat;
   color: white;
-  // height: 700px;
-  height: 300px;
+  height: 700px;
+  @include respond-to(mobile) {
+    height: 540px;
+    background-image: url('img/header/bg-768.jpg');
+  }
+  @include respond-to(mobile-portrait) {
+    background-image: url('img/header/bg-320.jpg');
+  }
+}
+.header__auth {
+  float: right;
+  padding: 40px;
+}
+.header__logo {
+  float: left;
+  padding: 50px;
+}
+.header__auth, .header__logo {
+  @include respond-to(mobile) {
+    float: none;
+  }
 }
 .header__title {
   color: white;
   font-size: 52px;
   font-weight: 700;
   text-transform: uppercase;
+  padding-top: 230px;
+  @include respond-to(mobile) {
+    font-size: 30px;
+    padding-top: 30px;
+  }
+}
+.header__subtitle {
+  font: 24px Roboto, sans-serif;
+  padding: 48px 0;
 }

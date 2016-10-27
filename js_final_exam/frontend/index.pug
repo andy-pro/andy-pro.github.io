@@ -16,50 +16,33 @@ block content
     .container
       section.wrapper
         .section__title How Urlaubsglück works?
-        .col-1-3
+        .slider
           #carousel1.owl-carousel
             +Slider(slider1_data)
-        .col-1-3
+        .slider
           #carousel2.owl-carousel
             +Slider(slider2_data)
-        .col-1-3
+        .slider
           #carousel3.owl-carousel
             +Slider(slider3_data)
 
       section.wrapper
         .section__title Meet a partner for your best holiday
         +Partners(partners_data)
-        .section__title With different-sized pictures testing
-        +Partners(partners_data_test)
-        .section__title
-          button.button--transparent--red.button--md See other partners
-
-        .section__title Discover holiday activity ideas
-        .grid
-          .grid-sizer
-          .gutter-sizer
-          .grid-item
-            img(src='dist/img/grid/Layer-10.jpg')
-          .grid-item
-            img(src='dist/img/grid/Layer-11.jpg')
-          .grid-item
-            img(src='dist/img/grid/Layer-12.jpg')
-          .grid-item
-            img(src='dist/img/grid/Layer-13.jpg')
-          .grid-item.grid-item--width2
-            img(src='dist/img/grid/Layer-14.jpg')
-          .grid-item.grid-item--width2
-            img(src='dist/img/grid/Layer-15.jpg')
-          .grid-item
-            img(src='dist/img/grid/Layer-16.jpg')
-
-        .section__title Discover holiday activity ideas
+        //- with different-sized pictures testing
+        //- +Partners(partners_data_test)
         .center
-          p Hi! What are your holiday interests?
-          form#pixplorer
-            input(type='text' placeholder='Enter your interests')
-            button.button--red.button--md(type='submit') Search partners
-          #gallery
+          button.btn--transparent--red.btn--md.btn--mobile See other partners
+
+      section.wrapper
+        .section__title Discover holiday activity ideas
+        #grid.grid
+
+      .center
+        p Hi! What are your holiday interests?
+        form#pixplorer
+          input(type='text' placeholder='Enter your interests')
+          button.btn--red.btn--md.btn--mobile(type='submit') Search partners
 
   //- footer
   include ./footer/index

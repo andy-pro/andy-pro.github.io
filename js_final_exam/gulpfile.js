@@ -21,9 +21,10 @@ const gulp = require('gulp'),
       watch = require('gulp-watch'),
       data = require('gulp-data'),
       plumber = require('gulp-plumber'),
-      // cleanCSS = require('gulp-clean-css'),
+      cleanCSS = require('gulp-clean-css'),
       sass = require('gulp-sass'),
       moduleImporter = require('sass-module-importer'),
+      combineMq = require('gulp-combine-mq'),
       urlAdjuster = require('gulp-css-url-adjuster'),
       pug = require('gulp-pug'),
       concat = require('gulp-concat'),
@@ -73,16 +74,19 @@ gulp.task('html:build', () => gulp
 );
 
 // nested, expanded, compact, compressed
-const outputStyle = production ? 'compressed' : 'nested';
+// const outputStyle = production ? 'compressed' : 'nested';
+
+var outputStyle = 'compressed';
+var mq_beautify = false;
 
 gulp.task('css:build', () => gulp
   .src(prj.src.css)
   // .pipe(sass())
-  .pipe(sass({ outputStyle, importer: moduleImporter() }))
+  .pipe(sass({ outputStyle: 'nested', importer: moduleImporter() }))
+  .pipe(combineMq({beautify: false}))
   .pipe(prefixer({browsers}))
-  // .pipe(urlAdjuster({prepend: '../img/'}))
   .pipe(urlAdjuster({prepend: '../'}))
-  // .pipe(cleanCSS({keepSpecialComments: 0}))
+  .pipe(gulpIf(production, cleanCSS({keepSpecialComments: 0})))
   // .pipe(concat('main.min.css'))
   .pipe(gulp.dest(prj.dest.css))
 );

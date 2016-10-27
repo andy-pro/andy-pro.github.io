@@ -1,0 +1,43 @@
+.grid {
+  font-size: 0;
+  margin: 0 auto;
+  @include respond-to(desktop) {
+    // 170*4 + 40*3
+    width: 800px;
+  }
+  @include respond-to(tablet) {
+    // 170*3 + 40*2
+    width: 590px;
+  }
+  @include respond-to(mobile) {
+    width: 170px;
+  }
+}
+.grid__gutter {
+  width: 40px;
+}
+.grid__sizer, .grid__item {
+  width: 170px;
+}
+.grid__item {
+  margin-bottom: 20px;
+  border-radius: 4px;
+  text-align: center;
+}
+.grid__word {
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  font-size: 18px;
+  position: relative;
+  bottom: 24px;
+  width: 100%;
+  // background-image: linear-gradient(to right, white 15%, #bbb 50%, white 85%);
+}
+
+#pixplorer input {
+  width: 240px;
+  border-radius: 4px;
+  margin: 12px;
+  padding: 9px;
+  border: 1px solid #ccc;
+}

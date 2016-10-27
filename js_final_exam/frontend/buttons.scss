@@ -1,0 +1,40 @@
+// buttons
+button {
+  // font-size: 14px;
+  // font-weight: 700;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 18px;
+  color: white;
+  padding: 0 20px;
+  // height: 36px;
+  outline: none;
+}
+.btn--md {
+  font: bold 14px/36px Montserrat, sans-serif;
+}
+.btn--sm {
+  font: normal 10px/16px Montserrat, sans-serif;
+}
+.btn--transparent {
+  background-color: transparent;;
+  border-color: white;
+}
+.btn--red {
+  background-color: $red;
+  border-color: transparent;
+}
+.btn--transparent--red {
+  background-color: transparent;
+  border-color: $red;
+  color: $red;
+}
+.btn--mobile {
+  @include respond-to(mobile) {
+    width: 260px;
+  }
+}
+.btn--empty {
+  background-color: transparent;
+  border-color: transparent;;
+}

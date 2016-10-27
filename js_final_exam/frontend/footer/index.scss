@@ -1,14 +1,34 @@
-html {
-  min-height: 100%;
-  position: relative;
-}
-body {
-  // adjust this when it will be known footer height
-  margin-bottom: 300px;
-}
 footer {
   border-top: 4px solid $red;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
+  margin-top: 100px;
+  @include respond-to(mobile) {
+    margin-top: 35px;
+  }
+}
+.footer__logo, .footer__designed {
+  display: block;
+}
+.footer__item {
+  margin: 20px;
+  display: inline-block;
+  margin-left: 30px;
+  vertical-align: top;
+  @include respond-to(mobile) {
+    display: block;
+    text-align: center;
+  }
+}
+.footer__designed {
+  float: right;
+  font-size: 10px;
+  font-weight: 700;
+  color: #ccc;
+  text-align: end;
+  @include respond-to(mobile) {
+    float: none;
+    text-align: center;
+  }
+  img {
+    margin-top: 10px;
+  }
 }
