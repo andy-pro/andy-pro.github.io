@@ -12,18 +12,6 @@ function Pixplorer(opts) {
       </div>\
     <% } %>\
   ');
-  // var template = tmpl(`
-  //   <div class="grid__sizer"></div>
-  //   <div class="grid__gutter"></div>
-  //   <% var word = images[0].word, image;
-  //   for (var i = 0, l = images.length; i < l; i++) {
-  //     image = images[i]; %>
-  //     <div class="grid__item">
-  //       <img src="<%= image.imageurl %>">
-  //       <div class="grid__word"><%= word %></div>
-  //     </div>
-  //   <% } %>
-  // `);
 
   this.start = function(url) {
     var xhr = new XMLHttpRequest();
