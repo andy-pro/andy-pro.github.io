@@ -1,6 +1,6 @@
 /* it's a final exam */
 
-$(function() {
+document.addEventListener('DOMContentLoaded', function () {
 
   'use strict';
 
@@ -19,31 +19,49 @@ $(function() {
   $('#carousel3').owlCarousel(opts);
 
   var grid = document.getElementById('grid'),
-      form = document.getElementById('pixplorer'),
-      input = form.querySelector('input'),
-      query = 'http://api.pixplorer.co.uk/image?amount=12&size=tb';
+      pixform = document.getElementById('pixform'),
+      input = pixform.querySelector('input');
 
-  form.addEventListener('submit', function(e) {
-    var val = input.value,
-        url = query + (val ? '&word=' + val : '');
-    pixplorer.start(url);
+  pixform.addEventListener('submit', function(e) {
+    startPixEngine();
     e.preventDefault();
   });
 
-  var pixplorer = new Pixplorer({
+  // var pixplorer = new Pixplorer({
+  //   target: grid,
+  //   onLoad: initMasonry
+  // });
+
+  var pixabay = new Pixabay({
     target: grid,
     onLoad: initMasonry
   });
 
-  form.dispatchEvent(new Event('submit'));
+  // pixform.dispatchEvent(new Event('submit'));
+  startPixEngine();
+
+  function startPixEngine() {
+    var val = input.value;
+    // pixplorer.start(val);
+    pixabay.start(val);
+  }
 
   function initMasonry() {
     new Masonry(grid, {
-      columnWidth: '.grid__sizer',
+      columnWidth: '.grid__sizer--pixabay',
       gutter: '.grid__gutter',
       itemSelector: '.grid__item',
       transitionDuration: '0.5s'
     });
   }
+  //
+  // function initMasonry() {
+  //   new Masonry(grid, {
+  //     columnWidth: '.grid__sizer',
+  //     gutter: '.grid__gutter',
+  //     itemSelector: '.grid__item',
+  //     transitionDuration: '0.5s'
+  //   });
+  // }
 
 });

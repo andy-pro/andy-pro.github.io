@@ -4,9 +4,9 @@ include ../menu-v/index
 footer.footer
   .container
     a.footer__item.footer__logo(href='/')
-      img(src='dist/img/footer/logo.png', alt='URLAUBSGLÜCK')
+      .sprite-footer-logo
     each item in menu_v_data
         +menuV(item)(class='footer__item')
     a.footer__item.footer__designed(href='//www.areto.com') DESIGNED BY
       br
-      img(src='dist/img/footer/designed-logo.png', alt='ARETO')
+      .sprite-designed-logo

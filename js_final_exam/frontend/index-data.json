@@ -64,21 +64,25 @@
       "img": "partner-1.png",
       "icon": {"color": "red", "icon": "screen"},
       "name": "Bradley Hunter",
+      "url": "#partner1",
       "resume": "Based in Chicago. I love playing tennis and loud music."
     }, {
       "img": "partner-2.png",
       "icon": {"color": "green", "icon": "coffee"},
       "name": "Heather Walker",
+      "url": "#partner2",
       "resume": "I'm a happy person that loves cats and climbing on mountains."
     }, {
       "img": "partner-3.png",
       "icon": {"color": "orange", "icon": "lab"},
       "name": "Lucas Marsha",
+      "url": "#partner3",
       "resume": "I get my inspiration from nature and objects around me. I have a passion to colours, typography and skateboards."
     }, {
       "img": "partner-4.png",
       "icon": {"color": "blue", "icon": "email"},
       "name": "Bradley Hunter",
+      "url": "#partner4",
       "resume": "Based in Chicago. I love playing tennis and loud music."
     }
   ],

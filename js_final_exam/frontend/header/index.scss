@@ -5,6 +5,11 @@
   background-repeat: no-repeat;
   color: white;
   height: 700px;
+  @include respond-to(tablet) {
+    .container {
+      padding: 0 40px;
+    }
+  }
   @include respond-to(mobile) {
     height: 540px;
     background-image: url('img/header/bg-768.jpg');
@@ -15,13 +20,20 @@
 }
 .header__auth {
   float: right;
-  padding: 40px;
+  margin-top: 37px;
+  @include respond-to(mobile) {
+    margin-top: 18px;
+  }
 }
 .header__logo {
   float: left;
-  padding: 50px;
+  margin-top: 47px;
+  @include respond-to(mobile) {
+    margin-top: 113px;
+  }
 }
 .header__auth, .header__logo {
+  display: inline-block;
   @include respond-to(mobile) {
     float: none;
   }
@@ -31,7 +43,7 @@
   font-size: 52px;
   font-weight: 700;
   text-transform: uppercase;
-  padding-top: 230px;
+  padding-top: 214px;
   @include respond-to(mobile) {
     font-size: 30px;
     padding-top: 30px;
@@ -39,5 +51,9 @@
 }
 .header__subtitle {
   font: 24px Roboto, sans-serif;
-  padding: 48px 0;
+  padding: 23px 0 35px;
+  @include respond-to(mobile) {
+    font-size: 18px;
+    padding: 7px 30px 13px;
+  }
 }

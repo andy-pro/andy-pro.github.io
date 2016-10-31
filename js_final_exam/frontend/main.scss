@@ -1,6 +1,7 @@
 @import "normalize-css";
 @import "vars";
 
+/* ++ media queries ++ */
 $mobile: 320px;
 $tablet: 768px;
 $desktop: 940px;
@@ -8,6 +9,12 @@ $desktop: 940px;
 @mixin respond-to($media) {
   @if $media == mobile-portrait {
     @media only screen and (max-width: $mobile) { @content; }
+  }
+  @if $media == gte-tablet {
+    @media only screen and (min-width: $tablet) { @content; }
+  }
+  @if $media == lt-desktop {
+    @media only screen and (max-width: $desktop - 1) { @content; }
   }
   @else if $media == mobile {
     @media only screen and (max-width: $tablet - 1) { @content; }
@@ -19,9 +26,29 @@ $desktop: 940px;
     @media only screen and (min-width: $desktop) { @content; }
   }
 }
+/* -- media queries -- */
 
+/* ++ sprites ++ */
+@import "sprite";
+.sprite-header-logo {
+  @include sprite($header-logo);
+}
+.sprite-footer-logo {
+  @include sprite($footer-logo);
+}
+.sprite-designed-logo {
+  @include sprite($designed-logo);
+}
+[class^="sprite-"] {
+  display: inline-block;
+}
+/* -- sprites -- */
+
+/* ++ icon fonts ++ */
 @import "_fonts/icomoon";
+/* -- icon fonts -- */
 
+/* ++ common ++ */
 body {
   font: normal 14px Montserrat, sans-serif;
   color: #333;
@@ -41,17 +68,16 @@ a {
 }
 .container {
   margin: 0 auto;
+  max-width: $desktop;
   box-sizing: border-box;
-  @include respond-to(desktop) {
-    width: $desktop;
+  @include respond-to(lt-desktop) {
+    padding: 0 10px;
   }
   @include respond-to(tablet) {
-    width: $tablet;
-    padding: 0 10px;
+    max-width: $tablet;
   }
   @include respond-to(mobile) {
-    width: $mobile;
-    padding: 0 10px;
+    max-width: $mobile;
   }
 }
 .wrapper {
@@ -61,16 +87,19 @@ a {
 .section__title {
   font: bold 22px Montserrat;
   text-align: center;
-  margin: 100px 0 35px;
+  margin: 90px 0 35px;
   @include respond-to(mobile) {
     margin: 35px 0 20px;
   }
 }
+/* -- common -- */
 
+/* ++ components ++ */
 @import "buttons";
 @import "header/index";
 @import "slider/index";
 @import "partners/index";
-@import "pixplorer/index";
+@import "pixengines/index";
 @import "footer/index";
 @import "menu-v/index";
+/* -- components -- */

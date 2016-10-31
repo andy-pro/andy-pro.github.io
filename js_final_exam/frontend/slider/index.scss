@@ -1,48 +1,47 @@
 .slider {
-  float: left;
   background-color: #ff8523;
-  margin-bottom: 10px;
-  @include respond-to(mobile) {
-    margin-left: 0!important;
+  margin: 0 auto 10px;
+  @include respond-to(gte-tablet) {
+    &:first-child, &:last-child {
+      position: absolute;
+      top: 0;
+    }
+    &:first-child{
+      left: 0;
+    }
+    &:last-child {
+      right: 0;
+    }
   }
-  & + .slider {
-    margin-left: 20px;
-  }
+}
+.max-margin {
+  display: inline-block;
+  max-width: 10px;
 }
 .slider__slot {
   position: relative;
-  // margin: 6px;
   font-size: 0;
   background-position: center;
 }
-
 .slider, .slider__slot {
-  @include respond-to(desktop) {
-    width: 300px;
-    height: 400px;
-  }
+  height: 400px;
+  width: 300px;
   @include respond-to(tablet) {
     width: 236px;
-    height: 400px;
   }
   @include respond-to(mobile) {
-    width: 300px;
     height: 242px;
   }
 }
-
 .owl-prev, .owl-next {
-  @include respond-to(desktop) {
-    top: 130px;
-  }
+  top: 130px;
   @include respond-to(tablet) {
-    top: 40px;
+    top: 10px;
   }
   @include respond-to(mobile) {
     display: none;
   }
 }
-
 .slider__filter, .slider__footer {
   position: absolute;
   left: 0;
@@ -56,14 +55,13 @@
   border-radius: 4px;
 }
 .slider__footer {
-  padding: 16px;
+  padding: 20px 18px;
 }
 .slider__title {
-  // font-family: Montserrat;
   font-size: 24px;
   font-weight: 700;
   color: white;
-  margin: 16px 0;
+  margin: 14px 0 12px;
 }
 .slider_txt {
   font-size: 13px;

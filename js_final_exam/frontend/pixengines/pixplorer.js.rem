@@ -3,17 +3,21 @@ function Pixplorer(opts) {
   var template = tmpl('\
     <div class="grid__sizer"></div>\
     <div class="grid__gutter"></div>\
-    <% var word = images[0].word, image;\
-    for (var i = 0, l = images.length; i < l; i++) {\
-      image = images[i]; %>\
-      <div class="grid__item">\
-        <img src="<%= image.imageurl %>">\
-        <div class="grid__word"><%= word %></div>\
-      </div>\
+    <% var l = images.length, image;\
+    if (l) {\
+      var word = images[0].word;\
+      for (var i = 0; i < l; i++) {\
+        image = images[i]; %>\
+        <div class="grid__item">\
+          <img src="<%= image.imageurl %>">\
+          <div class="grid__word"><%= word %></div>\
+        </div>\
+      <% } %>\
     <% } %>\
   ');
 
-  this.start = function(url) {
+  this.start = function(val) {
+    var url = 'http://api.pixplorer.co.uk/image?amount=12&size=tb' + (val ? '&word=' + val : '');
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
     xhr.send();

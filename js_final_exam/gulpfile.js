@@ -4,10 +4,11 @@
     default
       watch
       build
+        html:build
         css:build
         js:build
-        html:build
         img:build
+        sprite:build
         fonts:build
 
     build --production
@@ -31,6 +32,7 @@ const gulp = require('gulp'),
       prefixer = require('gulp-autoprefixer'),
       uglify = require('gulp-uglify'),
       jshint = require('gulp-jshint'),
+      spritesmith = require('gulp.spritesmith'),
       path = require('path'),
       fs = require('fs');
 
@@ -39,7 +41,8 @@ const prj = {
     html: 'frontend/index.pug',
     css: 'frontend/main.scss',
     js: 'frontend/**/*.js',
-    img: 'frontend/**/*.{jpg,jpeg,png}',
+    img: ['frontend/**/*.{jpg,jpeg,png}', '!frontend/_*/**'],
+    sprite: 'frontend/_sprite/*.png',
     fonts: 'frontend/_fonts/*.{eot,svg,ttf,woff}'
   },
   dest: {
@@ -47,14 +50,14 @@ const prj = {
     css: 'dist/css',
     js: 'dist/js',
     img: 'dist/img',
+    sprite_path: 'img/sprite.png',
+    sprite_img: 'dist/img/sprite.png',
+    sprite_css: 'frontend/sprite.scss',
     fonts: 'dist/fonts'
   },
   watch: {
     html: ['frontend/**/*.pug', 'frontend/*.json'],
-    css: 'frontend/**/*.scss',
-    js: 'frontend/**/*.js',
-    img: 'frontend/**/*.{jpg,jpeg,png,svg}',
-    fonts: 'frontend/_fonts/*.{eot,svg,ttf,woff}'
+    css: 'frontend/**/*.scss'
   }
 };
 
@@ -76,16 +79,13 @@ gulp.task('html:build', () => gulp
 // nested, expanded, compact, compressed
 // const outputStyle = production ? 'compressed' : 'nested';
 
-var outputStyle = 'compressed';
-var mq_beautify = false;
-
 gulp.task('css:build', () => gulp
   .src(prj.src.css)
   // .pipe(sass())
   .pipe(sass({ outputStyle: 'nested', importer: moduleImporter() }))
   .pipe(combineMq({beautify: false}))
   .pipe(prefixer({browsers}))
-  .pipe(urlAdjuster({prepend: '../'}))
+  .pipe(urlAdjuster({prepend: '../'}))  // convert to pretty :-(
   .pipe(gulpIf(production, cleanCSS({keepSpecialComments: 0})))
   // .pipe(concat('main.min.css'))
   .pipe(gulp.dest(prj.dest.css))
@@ -95,7 +95,7 @@ gulp.task('js:build', () => gulp
   .src(prj.src.js)
   .pipe(plumber())
   .pipe(gulpIf(production, uglify()))
-  .pipe(concat('main.min.js'))
+  .pipe(concat('main.js'))
   .pipe(gulp.dest(prj.dest.js))
 );
 
@@ -103,6 +103,16 @@ gulp.task('img:build', () => gulp
   .src(prj.src.img)
   .pipe(gulp.dest(prj.dest.img))
 );
+
+gulp.task('sprite:build', () => {
+  var spriteData = gulp.src(prj.src.sprite).pipe(spritesmith({
+    cssFormat: 'scss',
+    imgPath: prj.dest.sprite_path,
+    imgName: prj.dest.sprite_img,
+    cssName: prj.dest.sprite_css
+  }));
+  return spriteData.pipe(gulp.dest('./'));
+});
 
 gulp.task('fonts:build', () => gulp
   .src(prj.src.fonts)
@@ -114,15 +124,17 @@ gulp.task('build', [
   'css:build',
   'js:build',
   'img:build',
+  'sprite:build',
   'fonts:build'
 ]);
 
 gulp.task('watch', () => {
   watch(prj.watch.html, () => gulp.start('html:build'));
   watch(prj.watch.css,  () => gulp.start('css:build'));
-  watch(prj.watch.js,   () => gulp.start('js:build'));
-  watch(prj.watch.img,  () => gulp.start('img:build'));
-  watch(prj.watch.fonts, () => gulp.start('fonts:build'));
+  watch(prj.src.js,     () => gulp.start('js:build'));
+  watch(prj.src.img,    () => gulp.start('img:build'));
+  watch(prj.src.sprite, () => gulp.start('sprite:build'));
+  watch(prj.src.fonts,  () => gulp.start('fonts:build'));
 });
 
 gulp.task('default', ['build', 'watch']);

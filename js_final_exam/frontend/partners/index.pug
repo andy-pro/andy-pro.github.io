@@ -3,10 +3,9 @@ mixin Partners(items)
     each item in items
       .partners__item
         .partners__img
-          //- .partners__frame
-            //- img(src='dist/img/partners/' + item.img)
           .partners__frame(style="background-image: url(dist/img/partners/" + item.img + ")")
           .partners__icon(class='partners__icon--' + item.icon.color)
             span(class='icon-' + item.icon.icon)
-        .partners__name= item.name
+        .partners__name
+          a(href= item.url)= item.name
         .partners__resume= item.resume

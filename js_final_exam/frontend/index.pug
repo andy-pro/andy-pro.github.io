@@ -14,17 +14,18 @@ block content
 
   main
     .container
-      section.wrapper
+      section
         .section__title How Urlaubsglück works?
-        .slider
-          #carousel1.owl-carousel
-            +Slider(slider1_data)
-        .slider
-          #carousel2.owl-carousel
-            +Slider(slider2_data)
-        .slider
-          #carousel3.owl-carousel
-            +Slider(slider3_data)
+        .wrapper
+          .slider
+            #carousel1.owl-carousel
+              +Slider(slider1_data)
+          .slider
+            #carousel2.owl-carousel
+              +Slider(slider2_data)
+          .slider
+            #carousel3.owl-carousel
+              +Slider(slider3_data)
 
       section.wrapper
         .section__title Meet a partner for your best holiday
@@ -38,9 +39,10 @@ block content
         .section__title Discover holiday activity ideas
         #grid.grid
 
-      .center
-        p Hi! What are your holiday interests?
-        form#pixplorer
+      section.wrapper.center
+        .section__title Discover holiday activity ideas
+        div Hi! What are your holiday interests?
+        form#pixform
           input(type='text' placeholder='Enter your interests')
           button.btn--red.btn--md.btn--mobile(type='submit') Search partners
 
