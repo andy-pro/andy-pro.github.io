@@ -77,7 +77,7 @@ a {
     max-width: $tablet;
   }
   @include respond-to(mobile) {
-    max-width: $mobile;
+    width: $mobile;
   }
 }
 .wrapper {
