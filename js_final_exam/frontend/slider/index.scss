@@ -2,14 +2,15 @@
   background-color: #ff8523;
   margin: 0 auto 10px;
   @include respond-to(gte-tablet) {
-    &:first-child, &:last-child {
+    &:first-child{
       position: absolute;
       top: 0;
-    }
-    &:first-child{
       left: 0;
     }
-    &:last-child {
+    &:first-child + & + & {
+    // &:last-child { // not ork in ie8
+      position: absolute;
+      top: 0;
       right: 0;
     }
   }

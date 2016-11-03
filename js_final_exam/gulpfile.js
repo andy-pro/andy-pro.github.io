@@ -7,7 +7,7 @@
         html:build
         css:build
         js:build
-        img:build
+        img:build (with imagemin)
         sprite:build
         fonts:build
 
@@ -17,22 +17,23 @@
 'use strict';
 
 const gulp = require('gulp'),
+      prefixer = require('gulp-autoprefixer'),
+      cleanCSS = require('gulp-clean-css'),
+      combineMq = require('gulp-combine-mq'),
+      concat = require('gulp-concat'),
+      urlAdjuster = require('gulp-css-url-adjuster'),
+      data = require('gulp-data'),
       gulpIf = require('gulp-if'),
+      imagemin = require('gulp-imagemin'),
+      jshint = require('gulp-jshint'),
+      plumber = require('gulp-plumber'),
+      pug = require('gulp-pug'),
+      sass = require('gulp-sass'),
+      uglify = require('gulp-uglify'),
       util = require('gulp-util'),
       watch = require('gulp-watch'),
-      data = require('gulp-data'),
-      plumber = require('gulp-plumber'),
-      cleanCSS = require('gulp-clean-css'),
-      sass = require('gulp-sass'),
-      moduleImporter = require('sass-module-importer'),
-      combineMq = require('gulp-combine-mq'),
-      urlAdjuster = require('gulp-css-url-adjuster'),
-      pug = require('gulp-pug'),
-      concat = require('gulp-concat'),
-      prefixer = require('gulp-autoprefixer'),
-      uglify = require('gulp-uglify'),
-      jshint = require('gulp-jshint'),
       spritesmith = require('gulp.spritesmith'),
+      moduleImporter = require('sass-module-importer'),
       path = require('path'),
       fs = require('fs');
 
@@ -40,8 +41,8 @@ const prj = {
   src: {
     html: 'frontend/index.pug',
     css: 'frontend/main.scss',
-    js: 'frontend/**/*.js',
-    img: ['frontend/**/*.{jpg,jpeg,png}', '!frontend/_*/**'],
+    js: ['lib/**/*.js', 'frontend/**/*.js', '!lib/_*/**'],
+    img: ['frontend/**/*.{jpg,jpeg,png}', 'lib/**/*.{jpg,jpeg,png,gif}', '!frontend/_*/**', '!lib/_*/**'],
     sprite: 'frontend/_sprite/*.png',
     fonts: 'frontend/_fonts/*.{eot,svg,ttf,woff}'
   },
@@ -61,7 +62,7 @@ const prj = {
   }
 };
 
-const browsers = ['ie >= 10', 'ff >= 3', 'Opera >= 15', 'Chrome >= 4'];
+const browsers = ['ie >= 8', 'ff >= 3', 'Opera >= 15', 'Chrome >= 4'];
 
 const production = !!util.env.production;
 
@@ -95,12 +96,15 @@ gulp.task('js:build', () => gulp
   .src(prj.src.js)
   .pipe(plumber())
   .pipe(gulpIf(production, uglify()))
-  .pipe(concat('main.js'))
+  .pipe(concat('main.js', {newLine: ';'}))
   .pipe(gulp.dest(prj.dest.js))
 );
 
 gulp.task('img:build', () => gulp
   .src(prj.src.img)
+  .pipe(imagemin({
+    optimizationLevel: 5
+  }))
   .pipe(gulp.dest(prj.dest.img))
 );
 

@@ -1,25 +1,40 @@
 doctype html
+<!--[if IE 8 ]><!--><html class="ie8"><!--<![endif]-->
+<!--[if IE 9 ]><!--><html class="ie9"><!--<![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!--><html><!--<![endif]-->
 html(lang="en")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    //- meta(http-equiv="Content-Security-Policy", content="block-all-mixed-content")
-    //- meta(http-equiv="Content-Security-Policy", content="")
     link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat|Roboto")
-    link(rel="stylesheet", href="lib/owl-carousel/owl.carousel.css")
-    link(rel="stylesheet", href="lib/owl-carousel/owl.theme.css")
+    //- link(rel="stylesheet", href="lib/owl-carousel/owl.carousel.css")
+    //- link(rel="stylesheet", href="lib/owl-carousel/owl.theme.css")
     link(rel="stylesheet", href="dist/css/main.css")
-    script(src="https://code.jquery.com/jquery-1.12.4.min.js")
-    //- script(src="../node_modules/jquery/dist/jquery.min.js")
-    script(src="lib/owl-carousel/owl.carousel.min.js")
-    script(src="lib/masonry.pkgd.min.js")
-    script(src="lib/imagesloaded.pkgd.min.js")
-    script(src="lib/resig.tmpl.mod.js")
-    script(src="dist/js/main.js")
     block title
       title Document
-  ='\n'
+
+
+    //- script(src="http://cdn.jsdelivr.net/jquery/1.9.1/jquery.min.js")
+    script(src="../public/bower_components/jquery/dist/jquery-1.12.4.min.js")
+    //- script(src="../node_modules/jquery/dist/jquery.min.js")
+
+    //- script(src="lib/polyfills.js")
+
+    <!--[if lt IE 9]>
+      <script src="http://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="http://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    //- script(src="lib/owl-carousel/owl.carousel.min.js")
+    //- script(src="lib/masonry.pkgd.min.js")
+    //- script(src="lib/masonry.pkgd.js")
+    //- script(src="lib/masonry.pkgd.v3.min.js")
+    //- script(src="lib/imagesloaded.pkgd.min.js")
+    //- script(src="lib/imagesloaded.pkgd.v3.min.js")
+    //- script(src="lib/resig.tmpl.mod.js")
+    script(src="dist/js/main.js")
+
   body
     block content
       content Hello world!

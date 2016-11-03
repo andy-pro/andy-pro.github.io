@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', function () {
   var opts = {
     navigation: true,
     // navigationText: ['<', '>'],
-    navigationText: ['&lang;', '&rang;'],
+    navigationText: ['&lsaquo;', '&rsaquo;'],
+    // navigationText: ['&lang;', '&rang;'], // not work in ie8
     slideSpeed: 300,
     paginationSpeed: 400,
     singleItem: true,

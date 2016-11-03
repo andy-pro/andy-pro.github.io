@@ -3,20 +3,29 @@
   "version": "1.0.0",
   "description": "Домашнее задание:",
   "main": "main.js",
-  "dependencies": {},
+  "dependencies": {
+    "normalize-css": "^2.3.1"    
+  },
   "devDependencies": {
-    "grunt": "^1.0.1",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-cssmin": "^1.0.2",
-    "grunt-contrib-uglify": "^2.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-clean-css": "^2.0.12",
+    "gulp-combine-mq": "^0.4.0",
     "gulp-concat": "^2.6.0",
     "gulp-css-url-adjuster": "^0.2.3",
-    "gulp-html-extend": "^1.1.6",
+    "gulp-data": "^1.2.1",
+    "gulp-if": "^2.0.1",
+    "gulp-imagemin": "^3.1.0",
+    "gulp-jshint": "^2.0.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-pug": "^3.0.4",
+    "gulp-sass": "^2.3.2",
     "gulp-uglify": "^2.0.0",
-    "gulp-watch": "^4.3.9"
+    "gulp-util": "^3.0.7",
+    "gulp-watch": "^4.3.9",
+    "gulp.spritesmith": "^6.2.1",
+    "jshint": "^2.9.3",
+    "sass-module-importer": "^1.2.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
