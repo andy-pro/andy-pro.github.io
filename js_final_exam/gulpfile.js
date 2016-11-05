@@ -95,7 +95,11 @@ gulp.task('css:build', () => gulp
 gulp.task('js:build', () => gulp
   .src(prj.src.js)
   .pipe(plumber())
-  .pipe(gulpIf(production, uglify()))
+  .pipe(gulpIf(production, uglify({
+    compress: {
+      // support_ie8: true // ?, compress error
+    }
+  })))
   .pipe(concat('main.js', {newLine: ';'}))
   .pipe(gulp.dest(prj.dest.js))
 );

@@ -14,7 +14,7 @@ a {
   background: #ccd url('public/img/back.gif') no-repeat top right;
   font-size: 0;
   min-height: 500px;
-  width: 680px;
+  width: 780px;
   margin: 30px auto;
   box-shadow: 5px 5px 10px gray;
   -webkit-box-shadow: 5px 5px 10px gray;
@@ -23,10 +23,10 @@ a {
 }
 #main > div {
   display: inline-block;
-  width: 50%;
+  width: 33%;
   vertical-align: top;
   font-size: 14px;
-  padding: 5px;
+  padding: 2px 0 10px 30px;
   box-sizing: border-box;
 }
 #main h3 {
@@ -36,8 +36,9 @@ a {
 }
 ul{
   list-style:  none;
-  font: bold 1.2em/1.5em sans-serif;
+  font: bold 1.1em/1.5em sans-serif;
   color: #147;
+  padding: 0;
 }
 ul a {
   opacity: 0.5;
@@ -68,7 +69,7 @@ ul a:hover {
   line-height: 60px;
 }
 
-@media screen and (max-width: 679px) {
+@media screen and (max-width: 799px) {
 
   #main {
     width: 340px;

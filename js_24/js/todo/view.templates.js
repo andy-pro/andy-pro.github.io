@@ -1,4 +1,5 @@
-define(() => new Object({
+// define(() => new Object({
+define(() => ({
   main: `
     <div class="todo">
       <div class="todo__header">

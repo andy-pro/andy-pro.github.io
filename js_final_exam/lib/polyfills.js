@@ -1,4 +1,4 @@
-//addEventListener, DOMContentLoaded, stopPropagation
+//addEventListener, DOMContentLoaded, preventDefault, stopPropagation, ...
 (function() {
   if (!Event.prototype.preventDefault) {
     Event.prototype.preventDefault=function() {

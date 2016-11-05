@@ -1,0 +1,76 @@
+@mixin on-hover($color) {
+  cursor: pointer;
+  box-shadow: 0 0 10px $color;
+}
+
+$border-color: #26a69a;
+$tile-color: #477;
+
+.tiles {
+  color: $tile-color;
+  margin: 30px auto;
+  font-size: 13px;
+}
+.tiles__table {
+  border-radius: 10px;
+  border: 1px solid $border-color;
+  padding: 5px;
+}
+.tiles__nest {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  padding: 2px;
+  vertical-align: top;
+}
+.tiles__item {
+  border-radius: 5px;
+  box-shadow: 0 0 2px orange inset;
+  text-align: center;
+  padding-top: 15px;
+  box-sizing: border-box;
+  height: 100%;
+  &:hover {
+    @include on-hover(orange);
+  }
+}
+.tiles__button {
+  font-size: 1.2em;
+  padding: 10px 50px;
+  background-color: $border-color;
+  color: white;
+  display: inline-block;
+  border-radius: 5px;
+  outline: 0;
+  border: none;
+  &:hover {
+    @include on-hover($border-color);
+  }
+}
+.tiles__button--gameover {
+  background-color: orange;
+}
+.tiles__select {
+  border-radius: 5px;
+  border: 1px solid $border-color;
+  height: 25px;
+  margin: 20px 5px;
+  outline: 0;
+}
+
+/* Animations */
+.tile-enter {
+  opacity: 0.01;
+  transition: opacity 0.5s;
+}
+.tile-enter.tile-enter-active {
+  opacity: 1;
+}
+.tile-leave {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.tile-leave.tile-leave-active {
+  opacity: 0.01;
+}
