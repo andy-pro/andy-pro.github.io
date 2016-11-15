@@ -1,0 +1,12 @@
+.close {
+  font: bold 34px/20px sans-serif;
+  opacity: 0.3;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  &:after { content: '×'; }
+  &:hover { opacity: 0.6; }
+}

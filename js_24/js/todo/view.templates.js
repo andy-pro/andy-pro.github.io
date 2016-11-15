@@ -3,7 +3,8 @@ define(() => ({
   main: `
     <div class="todo">
       <div class="todo__header">
-        <span>TO</span><span> DO</span><span> LIST</span></div>
+        <span>TO</span><span> DO</span><span> LIST</span>
+      </div>
       <form>
         <input type="text" class="todo__input" title="Добавить новое дело" required autofocus>
       </form>

@@ -1,0 +1,54 @@
+@import "vars";
+
+body {
+  font: 15px Tahoma, Arial, sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+
+.container {
+  margin: 0 auto;
+  width: 500px;
+  position: relative;
+}
+.center {
+  text-align: center;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.well {
+  background-color: moccasin;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px lightgray;
+  margin: 20px;
+  padding: 10px;
+}
+
+button, [type=button] {
+  border: 1px solid #aaa;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25) inset, 2px 2px 3px lightgray;
+  border-radius: 6px;
+  font-size: 14px;
+  padding: 6px 20px;
+  cursor: pointer;
+  margin-left: 4px;
+  outline: 0;
+}
+.btn-default {
+  color: #555;
+  background-color: #eee;
+}
+.btn-primary {
+  color: white;
+  background-color: #37b;
+}

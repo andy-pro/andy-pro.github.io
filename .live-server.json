@@ -2,7 +2,7 @@
   "rem https": "./https",
   "port": 3000,
   "open": false,
-  "ignorePattern": "frontend\\.*|bower_components\\.*",
+  "ignorePattern": "frontend\\.*|public\\.*",
   "wait": 200,
   "logLevel": 2
 }

@@ -18,8 +18,6 @@ $tile-color: #477;
 }
 .tiles__nest {
   display: inline-block;
-  width: 100px;
-  height: 100px;
   box-sizing: border-box;
   padding: 2px;
   vertical-align: top;
@@ -28,16 +26,23 @@ $tile-color: #477;
   border-radius: 5px;
   box-shadow: 0 0 2px orange inset;
   text-align: center;
-  padding-top: 15px;
+  padding-top: 10px;
+  font-size: 11px;
   box-sizing: border-box;
   height: 100%;
-  &:hover {
-    @include on-hover(orange);
+}
+.desktop-device {
+  .tiles__item {
+    padding-top: 15px;
+    font-size: 13px;
+    &:hover {
+      @include on-hover(orange);
+    }
   }
 }
 .tiles__button {
   font-size: 1.2em;
-  padding: 10px 50px;
+  padding: 10px 30px;
   background-color: $border-color;
   color: white;
   display: inline-block;

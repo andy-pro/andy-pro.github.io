@@ -24,23 +24,23 @@ export default class TilesGameLogic {
 
   pick(latter) {
     // vars 'latter' and 'former' match the current and previous tiles
-    if(NODE_ENV == 'development') {
-      console.log(latter);
-    }
+    // if(NODE_ENV == 'development') {
+    //   console.log(latter, this);
+    // }
     let former = this.former;
     if(former === null) { // first click for pair
       this.former = latter;
       this.on_show(latter);
     } else { // second click for pair
-      if(former.id == latter.id) { // need to close the tile, it is the same!
+      if(former.id === latter.id) { // need to close the tile, it is the same!
         this.on_hide(latter);
       } else { // different tiles
         this.on_show(latter);
-        if(former.icon == latter.icon) { // the contents of the tiles is same, both should disappear
+        if(former.icon_id === latter.icon_id) { // the contents of the tiles is same, both should disappear
           this.on_hit(former, latter);
           if(!--this.count) {
             this.gameover = true;
-            this.on_gameover(Math.floor((performance.now() - this.starttime)/1000));
+            this.on_gameover();
           }
         } else{ // different contents, both should close
           this.on_miss(former, latter);
@@ -51,32 +51,34 @@ export default class TilesGameLogic {
     }
   }
 
-  start(num_pairs, num_icons) {
+  start(num_pairs, icon_classes) {
 
     this.count = num_pairs;
     this.former = null;
     this.gameover = false;
 
     let icons = [],
-        tiles = [];
+        tiles = [],
+        num_icons = icon_classes.length;
 
     // get randomized list of indexes
-    for(let i = 0, l = num_icons; i < l; i++) {
+    for(let i = 0; i < num_icons; i++) {
       icons[i] = Math.floor(i % num_icons);
     }
     shuffle(icons);
 
     for(let i = 0, l = num_pairs * 2; i < l; i++) {
+      let icon_id = icons[i % num_pairs];
       tiles.push({
         // show: true, // uncomment this for God-mode :)
         id: i,
-        icon: icons[i % num_pairs]
+        icon_id,
+        icon_class: icon_classes[icon_id],
+        exist: true
       });
     }
 
     shuffle(tiles); // comment this for half-God-mode :)
-
-    this.starttime = performance.now();
 
     return tiles;
 
