@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 
 module.exports = {
-    entry: "./app.js",
+    entry: "./app.jsx",
     output: {
         path: __dirname + '/public/build/',
         publicPath: "build/",

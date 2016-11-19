@@ -91,4 +91,3 @@ ReactDOM.render(
     <App />,
     document.getElementById('mount-point')
 );
-

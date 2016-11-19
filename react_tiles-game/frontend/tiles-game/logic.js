@@ -7,6 +7,8 @@
 
 'use strict';
 
+import {shuffle} from '../utils';
+
 export default class TilesGameLogic {
 
   constructor(opts) {
@@ -23,9 +25,9 @@ export default class TilesGameLogic {
   }
 
   pick(latter) {
-    // vars 'latter' and 'former' match the current and previous tiles
+    /* vars 'latter' and 'former' match the current and previous tiles */
     // if(NODE_ENV == 'development') {
-    //   console.log(latter, this);
+      // console.log('pick func of the logic:', JSON.stringify(latter));
     // }
     let former = this.former;
     if(former === null) { // first click for pair
@@ -52,7 +54,6 @@ export default class TilesGameLogic {
   }
 
   start(num_pairs, icon_classes) {
-
     this.count = num_pairs;
     this.former = null;
     this.gameover = false;
@@ -61,7 +62,7 @@ export default class TilesGameLogic {
         tiles = [],
         num_icons = icon_classes.length;
 
-    // get randomized list of indexes
+    /* get randomized list of indexes */
     for(let i = 0; i < num_icons; i++) {
       icons[i] = Math.floor(i % num_icons);
     }
@@ -70,29 +71,18 @@ export default class TilesGameLogic {
     for(let i = 0, l = num_pairs * 2; i < l; i++) {
       let icon_id = icons[i % num_pairs];
       tiles.push({
-        // show: true, // uncomment this for God-mode :)
+        show: 0, // set this to 1 for God-mode :)
         id: i,
         icon_id,
         icon_class: icon_classes[icon_id],
-        exist: true
+        blocked: 0,
+        exist: 1
       });
     }
 
     shuffle(tiles); // comment this for half-God-mode :)
 
     return tiles;
-
-    // Shuffles an array in-place, source: http://stackoverflow.com/a/12646864
-    function shuffle(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-        let j = Math.floor(Math.random() * (i + 1));
-        let temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-      }
-      return array;
-    }
-
   }
 
 }
