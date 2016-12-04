@@ -1,0 +1,54 @@
+/* === common === */
+html {
+  min-height: 100%;
+  position: relative;
+}
+body {
+  font-family: arial,sans-serif;
+  color: #222;
+  background: #fff;
+  margin-bottom: 200px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover{
+  text-decoration: underline;
+}
+img {
+  display: block;
+}
+.center {
+  text-align: center;
+}
+.center-block {
+  margin: 0 auto;
+}
+
+.header, .footer {
+  background: #eee;
+  color: #666;
+  border-color: #ddd;
+  border-style: solid;
+}
+.header {
+  border-width: 0 0 1px 0;
+}
+.footer {
+  font-size: 10pt;
+  line-height: 40px;
+  border-width: 1px 0 0 0;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+}
+.footer a {
+  margin-right: 30px;
+}
+.footer__right {
+  float: right;
+}
+.content {
+  padding: 10px 100px;
+}

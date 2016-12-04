@@ -37,7 +37,7 @@ document.querySelector('html').classList.add(
 // alert('touchpad: ' + isTouch);
 
 ReactDOM.render(
-  <TilesGame level='2' />,
+  <TilesGame />,
   document.getElementById('content1')
 );
 

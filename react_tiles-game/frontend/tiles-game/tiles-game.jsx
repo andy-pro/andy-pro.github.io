@@ -26,6 +26,14 @@ import Controls from './controls';
 
 export default class TilesGame extends React.Component {
 
+  static propTypes = {
+    level: React.PropTypes.string
+  };
+
+  static defaultProps = {
+    level: '2'
+  };
+
   constructor(props) {
     super(props);
     this.logic = new Logic({
@@ -129,6 +137,3 @@ export default class TilesGame extends React.Component {
   }
 
 }
-
-TilesGame.propTypes = { level: React.PropTypes.string };
-TilesGame.defaultProps = { level: '2' };

@@ -51,6 +51,8 @@ const prj = {
 };
 
 const production = !!util.env.production;
+const NODE_ENV = process.env.NODE_ENV;
+console.log('NODE_ENV:', NODE_ENV);
 
 var webpackConfig = {
   context: path.join(__dirname, 'frontend'),

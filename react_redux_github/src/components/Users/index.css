@@ -1,0 +1,22 @@
+#resultStats {
+  font-size: 12px;
+  color: #888;
+}
+
+/* === users list === */
+
+.user {
+  border-bottom: 1px solid #ddd;
+  font-size: 13px;
+}
+.user > div {
+  display: inline-block;
+  vertical-align: top;
+  padding: 4px 4px 2px;
+}
+.user__link {
+  color: #21a;
+}
+.user__score {
+  color: #073;
+}
