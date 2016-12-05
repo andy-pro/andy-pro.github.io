@@ -21,7 +21,7 @@ export const promise = ({dispatch}) => {
       payload => {
         dispatch({
           type: action.payload,
-          payload: payload
+          payload
         });
         setLoadingState({status: 'stop'})
       },
@@ -40,7 +40,7 @@ export const timer = ({dispatch}) => {
       new Promise(function(resolve, reject) {
         timers[action.timerId] = setTimeout(resolve, action.delay);
       /* dispatch scheduled action */
-      }).then(() => dispatch(action.payload(action.args)))      
+      }).then(() => dispatch(action.action()))
     }
     else if (action.type === types.STOP_TIMER) {
       clearTimeout(timers[action.timerId]);

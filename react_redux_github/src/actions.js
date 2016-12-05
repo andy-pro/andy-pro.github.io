@@ -24,12 +24,11 @@ export const flashMessage = payload => ({
   payload
 })
 
-export const startTimer = (timerId, {delay, payload, args}) => ({
+export const startTimer = (timerId, {delay, action, args}) => ({
   type: types.START_TIMER,
   timerId,
   delay,
-  payload,
-  args
+  action: () => action(args)
 })
 
 export const stopTimer = timerId => ({

@@ -55,7 +55,7 @@ const mapDispatchToProps = dispatch => ({
       // console.log('X:', el.offsetLeft+el.offsetWidth, 'Y:', el.offsetTop)
       dispatch(startTimer(types.GET_REPOS, {
         delay: 500,
-        payload: getRepos,
+        action: getRepos,
         args: {
           url: user.repos_url,
           // ability to transfer additional data
@@ -72,7 +72,7 @@ const mapDispatchToProps = dispatch => ({
 
     }
     else if (e.type === 'mouseout') {
-      dispatch(startTimer(types.HIDE_REPOS, {delay: 1000, payload: hideRepos}))
+      dispatch(startTimer(types.HIDE_REPOS, {delay: 1000, action: hideRepos}))
       dispatch(stopTimer(types.GET_REPOS))
     }
   }

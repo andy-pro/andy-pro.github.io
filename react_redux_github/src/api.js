@@ -19,7 +19,7 @@ export const getRepos = ({url, data}) => {
     show: true
   })
   return  cache[url] ?
-    new Promise((res, rej) => res())
+    new Promise(res => res())
       .then(() => payload(cache[url]))
     :
     // fetch(url, {cache: 'force-cache'})
